@@ -1,0 +1,183 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Sun Mar 17 09:47:44 2024
+[*]
+[dumpfile] "wave_cmc.ghw"
+[dumpfile_mtime] "Sun Mar 17 09:47:03 2024"
+[dumpfile_size] 181289
+[savefile] "wave.gtkw"
+[timestart] 1673
+[size] 1800 1097
+[pos] -1 -1
+*-10.000000 4750 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[markername] AA
+[markername] BB
+[markername] CC
+[markername] DD
+[markername] EE
+[markername] FF
+[markername] GG
+[markername] HH
+[markername] II
+[markername] JJ
+[markername] KK
+[markername] LL
+[markername] MM
+[markername] NN
+[markername] OO
+[markername] PP
+[markername] QQ
+[markername] RR
+[markername] SS
+[markername] TT
+[markername] UU
+[markername] VV
+[markername] WW
+[markername] XX
+[markername] YY
+[markername] ZZ
+[treeopen] top.
+[treeopen] top.tb_cmc.
+[treeopen] top.tb_cmc.i_cmc.
+[treeopen] top.tb_cmc.i_cmc.memc.
+[treeopen] top.tb_cmc.i_cmc.registers.
+[treeopen] top.tb_cmc.i_cmc.rfshcntr.
+[treeopen] top.tb_cmc.i_cmc.romc.
+[sst_width] 265
+[signals_width] 313
+[sst_expanded] 1
+[sst_vpaned_height] 553
+@28
+top.tb_cmc.clk
+top.tb_cmc.rfshclk
+top.tb_cmc.nrst
+@800200
+-Chip Select Signals
+@28
+top.tb_cmc.nromcs
+top.tb_cmc.i_cmc.nfpucs
+top.tb_cmc.i_cmc.ndmac0cs
+top.tb_cmc.i_cmc.ndmac1cs
+top.tb_cmc.i_cmc.nmfp0cs
+top.tb_cmc.i_cmc.nmfp1cs
+top.tb_cmc.i_cmc.nfdccs
+top.tb_cmc.i_cmc.nide0cs
+top.tb_cmc.i_cmc.nide1cs
+top.tb_cmc.i_cmc.nduartcs
+top.tb_cmc.i_cmc.nkbmscs
+top.tb_cmc.i_cmc.nrtccs
+top.tb_cmc.i_cmc.nvideocs
+@29
+top.tb_cmc.i_cmc.naudiocs
+@1000200
+-Chip Select Signals
+@800200
+-CPU Interface Signals
+@28
+top.tb_cmc.nas
+top.tb_cmc.nds
+top.tb_cmc.r_nw
+@2028
+^1 size_filter
+#{top.tb_cmc.size[1:0]} top.tb_cmc.size[1] top.tb_cmc.size[0]
+^2 dsack_filter
+#{top.tb_cmc.ndsack[1:0]} top.tb_cmc.ndsack[1] top.tb_cmc.ndsack[0]
+@28
+top.tb_cmc.nsterm
+@2028
+^3 fc_filter
+#{top.tb_cmc.fc[2:0]} top.tb_cmc.fc[2] top.tb_cmc.fc[1] top.tb_cmc.fc[0]
+@22
+#{top.tb_cmc.a[31:0]} top.tb_cmc.a[31] top.tb_cmc.a[30] top.tb_cmc.a[29] top.tb_cmc.a[28] top.tb_cmc.a[27] top.tb_cmc.a[26] top.tb_cmc.a[25] top.tb_cmc.a[24] top.tb_cmc.a[23] top.tb_cmc.a[22] top.tb_cmc.a[21] top.tb_cmc.a[20] top.tb_cmc.a[19] top.tb_cmc.a[18] top.tb_cmc.a[17] top.tb_cmc.a[16] top.tb_cmc.a[15] top.tb_cmc.a[14] top.tb_cmc.a[13] top.tb_cmc.a[12] top.tb_cmc.a[11] top.tb_cmc.a[10] top.tb_cmc.a[9] top.tb_cmc.a[8] top.tb_cmc.a[7] top.tb_cmc.a[6] top.tb_cmc.a[5] top.tb_cmc.a[4] top.tb_cmc.a[3] top.tb_cmc.a[2] top.tb_cmc.a[1] top.tb_cmc.a[0]
+#{top.tb_cmc.d[31:0]} top.tb_cmc.d[31] top.tb_cmc.d[30] top.tb_cmc.d[29] top.tb_cmc.d[28] top.tb_cmc.d[27] top.tb_cmc.d[26] top.tb_cmc.d[25] top.tb_cmc.d[24] top.tb_cmc.d[23] top.tb_cmc.d[22] top.tb_cmc.d[21] top.tb_cmc.d[20] top.tb_cmc.d[19] top.tb_cmc.d[18] top.tb_cmc.d[17] top.tb_cmc.d[16] top.tb_cmc.d[15] top.tb_cmc.d[14] top.tb_cmc.d[13] top.tb_cmc.d[12] top.tb_cmc.d[11] top.tb_cmc.d[10] top.tb_cmc.d[9] top.tb_cmc.d[8] top.tb_cmc.d[7] top.tb_cmc.d[6] top.tb_cmc.d[5] top.tb_cmc.d[4] top.tb_cmc.d[3] top.tb_cmc.d[2] top.tb_cmc.d[1] top.tb_cmc.d[0]
+@28
+top.tb_cmc.ncbreq
+top.tb_cmc.ncback
+@1000200
+-CPU Interface Signals
+@800200
+-SIMM Interface Signals
+@22
+#{top.tb_cmc.i_cmc.ma[11:0]} top.tb_cmc.i_cmc.ma[11] top.tb_cmc.i_cmc.ma[10] top.tb_cmc.i_cmc.ma[9] top.tb_cmc.i_cmc.ma[8] top.tb_cmc.i_cmc.ma[7] top.tb_cmc.i_cmc.ma[6] top.tb_cmc.i_cmc.ma[5] top.tb_cmc.i_cmc.ma[4] top.tb_cmc.i_cmc.ma[3] top.tb_cmc.i_cmc.ma[2] top.tb_cmc.i_cmc.ma[1] top.tb_cmc.i_cmc.ma[0]
+@28
+#{top.tb_cmc.i_cmc.ncas[3:0]} top.tb_cmc.i_cmc.ncas[3] top.tb_cmc.i_cmc.ncas[2] top.tb_cmc.i_cmc.ncas[1] top.tb_cmc.i_cmc.ncas[0]
+#{top.tb_cmc.i_cmc.nras[7:0]} top.tb_cmc.i_cmc.nras[7] top.tb_cmc.i_cmc.nras[6] top.tb_cmc.i_cmc.nras[5] top.tb_cmc.i_cmc.nras[4] top.tb_cmc.i_cmc.nras[3] top.tb_cmc.i_cmc.nras[2] top.tb_cmc.i_cmc.nras[1] top.tb_cmc.i_cmc.nras[0]
+top.tb_cmc.i_cmc.nwe
+@1000200
+-SIMM Interface Signals
+@800200
+-Cache Interface Signals
+@22
+#{top.tb_cmc.i_cmc.td[15:0]} top.tb_cmc.i_cmc.td[15] top.tb_cmc.i_cmc.td[14] top.tb_cmc.i_cmc.td[13] top.tb_cmc.i_cmc.td[12] top.tb_cmc.i_cmc.td[11] top.tb_cmc.i_cmc.td[10] top.tb_cmc.i_cmc.td[9] top.tb_cmc.i_cmc.td[8] top.tb_cmc.i_cmc.td[7] top.tb_cmc.i_cmc.td[6] top.tb_cmc.i_cmc.td[5] top.tb_cmc.i_cmc.td[4] top.tb_cmc.i_cmc.td[3] top.tb_cmc.i_cmc.td[2] top.tb_cmc.i_cmc.td[1] top.tb_cmc.i_cmc.td[0]
+#{top.tb_cmc.i_cmc.ncbe[3:0]} top.tb_cmc.i_cmc.ncbe[3] top.tb_cmc.i_cmc.ncbe[2] top.tb_cmc.i_cmc.ncbe[1] top.tb_cmc.i_cmc.ncbe[0]
+@28
+top.tb_cmc.i_cmc.nctwe
+top.tb_cmc.i_cmc.ntoe
+@1000200
+-Cache Interface Signals
+@800200
+-Misc Signals
+@28
+top.tb_cmc.i_cmc.nrefresh
+top.tb_cmc.i_cmc.npagehit
+top.tb_cmc.i_cmc.nboot
+@1000200
+-Misc Signals
+@800200
+-Registers
+@22
+#{top.tb_cmc.i_cmc.registers.mmcr[7:0]} top.tb_cmc.i_cmc.registers.mmcr[7] top.tb_cmc.i_cmc.registers.mmcr[6] top.tb_cmc.i_cmc.registers.mmcr[5] top.tb_cmc.i_cmc.registers.mmcr[4] top.tb_cmc.i_cmc.registers.mmcr[3] top.tb_cmc.i_cmc.registers.mmcr[2] top.tb_cmc.i_cmc.registers.mmcr[1] top.tb_cmc.i_cmc.registers.mmcr[0]
+#{top.tb_cmc.i_cmc.registers.mtr0[7:0]} top.tb_cmc.i_cmc.registers.mtr0[7] top.tb_cmc.i_cmc.registers.mtr0[6] top.tb_cmc.i_cmc.registers.mtr0[5] top.tb_cmc.i_cmc.registers.mtr0[4] top.tb_cmc.i_cmc.registers.mtr0[3] top.tb_cmc.i_cmc.registers.mtr0[2] top.tb_cmc.i_cmc.registers.mtr0[1] top.tb_cmc.i_cmc.registers.mtr0[0]
+#{top.tb_cmc.i_cmc.registers.mtr1[7:0]} top.tb_cmc.i_cmc.registers.mtr1[7] top.tb_cmc.i_cmc.registers.mtr1[6] top.tb_cmc.i_cmc.registers.mtr1[5] top.tb_cmc.i_cmc.registers.mtr1[4] top.tb_cmc.i_cmc.registers.mtr1[3] top.tb_cmc.i_cmc.registers.mtr1[2] top.tb_cmc.i_cmc.registers.mtr1[1] top.tb_cmc.i_cmc.registers.mtr1[0]
+#{top.tb_cmc.i_cmc.registers.mtr2[7:0]} top.tb_cmc.i_cmc.registers.mtr2[7] top.tb_cmc.i_cmc.registers.mtr2[6] top.tb_cmc.i_cmc.registers.mtr2[5] top.tb_cmc.i_cmc.registers.mtr2[4] top.tb_cmc.i_cmc.registers.mtr2[3] top.tb_cmc.i_cmc.registers.mtr2[2] top.tb_cmc.i_cmc.registers.mtr2[1] top.tb_cmc.i_cmc.registers.mtr2[0]
+@1000200
+-Registers
+@800200
+-Register Values
+@24
+#{top.tb_cmc.i_cmc.registers.mux_scheme[2:0]} top.tb_cmc.i_cmc.registers.mux_scheme[2] top.tb_cmc.i_cmc.registers.mux_scheme[1] top.tb_cmc.i_cmc.registers.mux_scheme[0]
+@2028
+^4 bank_size_filter
+#{top.tb_cmc.i_cmc.registers.bank_size[2:0]} top.tb_cmc.i_cmc.registers.bank_size[2] top.tb_cmc.i_cmc.registers.bank_size[1] top.tb_cmc.i_cmc.registers.bank_size[0]
+^5 module_count_filter
+#{top.tb_cmc.i_cmc.registers.module_count[1:0]} top.tb_cmc.i_cmc.registers.module_count[1] top.tb_cmc.i_cmc.registers.module_count[0]
+@420
+top.tb_cmc.i_cmc.registers.dual_bank
+top.tb_cmc.i_cmc.registers.ras_cas_delay
+top.tb_cmc.i_cmc.registers.write_cas_width
+top.tb_cmc.i_cmc.registers.cas_pre_delay
+@28
+#{top.tb_cmc.i_cmc.registers.rom_latency[2:0]} top.tb_cmc.i_cmc.registers.rom_latency[2] top.tb_cmc.i_cmc.registers.rom_latency[1] top.tb_cmc.i_cmc.registers.rom_latency[0]
+@1000200
+-Register Values
+@800200
+-Internal States: RFSHCNTR
+@8022
+#{top.tb_cmc.i_cmc.rfshcntr.refresh_counter[14:0]} top.tb_cmc.i_cmc.rfshcntr.refresh_counter[14] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[13] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[12] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[11] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[10] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[9] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[8] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[7] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[6] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[5] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[4] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[3] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[2] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[1] top.tb_cmc.i_cmc.rfshcntr.refresh_counter[0]
+@28
+top.tb_cmc.i_cmc.rfshcntr.rfshreq
+@1000200
+-Internal States: RFSHCNTR
+@800200
+-Internal States: ROMC
+@8028
+#{top.tb_cmc.i_cmc.romc.delay_counter[2:0]} top.tb_cmc.i_cmc.romc.delay_counter[2] top.tb_cmc.i_cmc.romc.delay_counter[1] top.tb_cmc.i_cmc.romc.delay_counter[0]
+@28
+top.tb_cmc.i_cmc.romc.delay_counter_valid
+@1000200
+-Internal States: ROMC
+@800200
+-Internal States: MEMC
+@8420
+top.tb_cmc.i_cmc.memc.delay_counter
+@420
+top.tb_cmc.i_cmc.memc.delay_valid
+@22
+#{top.tb_cmc.i_cmc.memc.prev_page[11:0]} top.tb_cmc.i_cmc.memc.prev_page[11] top.tb_cmc.i_cmc.memc.prev_page[10] top.tb_cmc.i_cmc.memc.prev_page[9] top.tb_cmc.i_cmc.memc.prev_page[8] top.tb_cmc.i_cmc.memc.prev_page[7] top.tb_cmc.i_cmc.memc.prev_page[6] top.tb_cmc.i_cmc.memc.prev_page[5] top.tb_cmc.i_cmc.memc.prev_page[4] top.tb_cmc.i_cmc.memc.prev_page[3] top.tb_cmc.i_cmc.memc.prev_page[2] top.tb_cmc.i_cmc.memc.prev_page[1] top.tb_cmc.i_cmc.memc.prev_page[0]
+@420
+top.tb_cmc.i_cmc.memc.prev_page_valid
+top.tb_cmc.i_cmc.memc.state
+@1000200
+-Internal States: MEMC
+[pattern_trace] 1
+[pattern_trace] 0

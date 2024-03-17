@@ -6,7 +6,7 @@
     (property "Value" "EPM7128SLC84-15" (at -5.497 -74.6679 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Footprint" "" (at 0 0 0)
+    (property "Footprint" "Package_LCC:PLCC-84" (at 0 0 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Datasheet" "" (at 0 0 0)
