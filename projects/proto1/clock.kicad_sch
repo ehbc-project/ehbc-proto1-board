@@ -1,813 +1,2238 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid 12fceb62-b597-4df6-9beb-9c7751ae3e44)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "C" (at 0.635 2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "C" (at 0.635 -2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "" (at 0.9652 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "cap capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "C_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "C_0_1"
-        (polyline
-          (pts
-            (xy -2.032 -0.762)
-            (xy 2.032 -0.762)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.032 0.762)
-            (xy 2.032 0.762)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "C_1_1"
-        (pin passive line (at 0 3.81 270) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:Crystal" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "Y" (at 0 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "Crystal" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "quartz ceramic resonator oscillator" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Two pin crystal" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "Crystal*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Crystal_0_1"
-        (rectangle (start -1.143 2.54) (end 1.143 -2.54)
-          (stroke (width 0.3048) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.54 0)
-            (xy -1.905 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -1.905 -1.27)
-            (xy -1.905 1.27)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.905 -1.27)
-            (xy 1.905 1.27)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 0)
-            (xy 1.905 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "Crystal_1_1"
-        (pin passive line (at -3.81 0 0) (length 1.27)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 3.81 0 180) (length 1.27)
-          (name "2" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Oscillator:ACO-xxxMHz-A" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "X" (at -5.08 6.35 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "ACO-xxxMHz-A" (at 1.27 -6.35 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "Oscillator:Oscillator_DIP-14" (at 11.43 -8.89 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf" (at -6.985 3.175 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "Crystal Clock Oscillator" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "HCMOS Crystal Clock Oscillator, DIP14-style metal package" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "Oscillator*DIP*14*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "ACO-xxxMHz-A_0_1"
-        (rectangle (start -10.16 5.08) (end 5.08 -5.08)
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (polyline
-          (pts
-            (xy -6.985 2.54)
-            (xy -6.35 2.54)
-            (xy -6.35 3.81)
-            (xy -5.715 3.81)
-            (xy -5.715 2.54)
-            (xy -5.08 2.54)
-            (xy -5.08 3.81)
-            (xy -4.445 3.81)
-            (xy -4.445 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "ACO-xxxMHz-A_1_1"
-        (pin input line (at -12.7 0 0) (length 2.54)
-          (name "Tri-State" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 7.62 270) (length 2.54)
-          (name "Vcc" (effects (font (size 1.27 1.27))))
-          (number "14" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 -7.62 90) (length 2.54)
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at 7.62 0 180) (length 2.54)
-          (name "OUT" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "m68k-hbc-ic:MX8315MC" (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at -21.59 15.24 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "MX8315MC" (at -5.08 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at -5.08 6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "http://bitsavers.trailing-edge.com/components/mxic/MXIC_MX8315_Motherboard_Clock_Generator_199309.pdf" (at -5.08 6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MX8315MC_1_1"
-        (rectangle (start -7.62 10.16) (end 7.62 -12.7)
-          (stroke (width 0) (type default))
-          (fill (type background))
-        )
-        (pin power_in line (at 1.27 -15.24 90) (length 2.54)
-          (name "AGND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 10.16 -2.54 180) (length 2.54)
-          (name "CAP" (effects (font (size 1.27 1.27))))
-          (number "10" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 -5.08 0) (length 2.54)
-          (name "S0" (effects (font (size 1.27 1.27))))
-          (number "11" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 -7.62 0) (length 2.54)
-          (name "S1" (effects (font (size 1.27 1.27))))
-          (number "12" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 -10.16 0) (length 2.54)
-          (name "S2" (effects (font (size 1.27 1.27))))
-          (number "13" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 1.27 12.7 270) (length 2.54)
-          (name "AVDD" (effects (font (size 1.27 1.27))))
-          (number "14" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at -10.16 7.62 0) (length 2.54)
-          (name "XO" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -10.16 5.08 0) (length 2.54)
-          (name "XI" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin output clock (at 10.16 7.62 180) (length 2.54)
-          (name "XCK" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin output clock (at 10.16 5.08 180) (length 2.54)
-          (name "PCK" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin input inverted (at -10.16 0 0) (length 2.54)
-          (name "~{LOP}" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at -1.27 -15.24 90) (length 2.54)
-          (name "DGND" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-        (pin output clock (at 10.16 2.54 180) (length 2.54)
-          (name "CK" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at -1.27 12.7 270) (length 2.54)
-          (name "DVDD" (effects (font (size 1.27 1.27))))
-          (number "9" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+5V" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+5V_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "+5V_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+5V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-  (junction (at 88.9 67.31) (diameter 0) (color 0 0 0 0)
-    (uuid 359d3366-2396-40d0-a916-08c647901b91)
-  )
-  (junction (at 91.44 95.25) (diameter 0) (color 0 0 0 0)
-    (uuid 81d9e5bb-d652-4e9e-9f40-82d63763cc49)
-  )
-
-  (wire (pts (xy 57.15 132.08) (xy 58.42 132.08))
-    (stroke (width 0) (type default))
-    (uuid 96c2f1ba-2430-4a0e-93ed-dd07ee57d21f)
-  )
-  (wire (pts (xy 91.44 95.25) (xy 88.9 95.25))
-    (stroke (width 0) (type default))
-    (uuid c9f86e61-235c-46da-91cb-f8d44f63a8d6)
-  )
-  (wire (pts (xy 88.9 67.31) (xy 91.44 67.31))
-    (stroke (width 0) (type default))
-    (uuid f6843781-26cf-4e5a-bbb3-1625c54af295)
-  )
-
-  (text "MC68030@25/33/50MHz\nMC68882@=MC68030\nMC68681@3.6864MHz\nMC68901@=MC68681\nMC68440@10MHz\nMC146818@32.768kHz\nPC8477BV@24MHz\nVT82C42@12MHz\nMX8315MC@14.31818MHz\nISABUS@8MHz\n\n3.6864MHz\n14.31818MHz -> 25/33/50Mhz, 12MHz, 24MHz, 8MHz\n32.768kHz\n10MHz\n"
-    (at 16.51 46.355 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 27b62dba-28ec-4d95-b04f-33a710505176)
-  )
-
-  (global_label "SYSREFCLK" (shape output) (at 97.79 157.48 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 1e5e5258-8268-447a-a236-9609cdb11208)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 111.3585 157.48 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "4MHz" (shape output) (at 99.06 133.35 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 33d1d2a8-97a1-4d9b-a4e8-baa40d5217c5)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 107.0647 133.35 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "14.31818MHz" (shape input) (at 97.79 157.48 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 41665009-5523-4bfd-a072-511474578d0b)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 81.9235 157.48 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "3.6864MHz" (shape output) (at 58.42 154.94 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 4b6ceda5-ca7a-4721-882b-b157bcf25392)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 71.8675 154.94 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "8MHz" (shape output) (at 58.42 176.53 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 5d20a08b-1dc6-4916-bb7a-8bb59f7f275c)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.4247 176.53 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "10MHz" (shape output) (at 57.785 132.08 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 5d54d895-2ed2-4aac-a336-5f35c55f4472)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.9992 132.08 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "ISACLK" (shape output) (at 99.06 162.56 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 87c79932-872c-4ed7-9d1e-47c401b5cffa)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 108.5162 162.56 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "14.31818MHz" (shape output) (at 100.33 72.39 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 95ba312a-52bb-4dd6-8bad-d379ae950bd8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 116.1965 72.39 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "FREQ_SEL2" (shape input) (at 80.01 90.17 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid a9df2074-6cbd-4b04-9d0d-015bb2ef56d5)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.623 90.17 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "8MHz" (shape input) (at 99.06 162.56 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid b31c2de6-5e89-4da4-9913-09643facd6bb)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 91.0553 162.56 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "FREQ_SEL1" (shape input) (at 80.01 87.63 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid b9bdc97b-364d-46fb-9ee6-b3f6ed86dc1c)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.623 87.63 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "24MHz" (shape output) (at 100.33 74.93 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid bd75ecfc-4856-407f-87c5-d6c236106d13)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 109.5442 74.93 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-  (global_label "FREQ_SEL0" (shape input) (at 80.01 85.09 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid bf007ddd-72a6-474a-82fe-be365aaa9305)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 66.623 85.09 0)
-      (effects (font (size 1.27 1.27)) (justify right) hide)
-    )
-  )
-  (global_label "PROC_CLK" (shape output) (at 100.33 77.47 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid d534eed6-2441-424b-99b6-57d310c8bad3)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 112.9914 77.47 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
-
-  (symbol (lib_id "Oscillator:ACO-xxxMHz-A") (at 91.44 133.35 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 0ed4f084-ace8-407c-966f-5deda1a1a563)
-    (property "Reference" "X2" (at 102.235 129.7021 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "8M" (at 102.235 132.2421 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Oscillator:Oscillator_DIP-14" (at 102.87 142.24 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf" (at 84.455 130.175 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "8" (uuid e648cc3c-bd6b-4ea0-8aff-050d00ffb1cd))
-    (pin "7" (uuid bbced21d-3ac6-445f-9682-2a3a48161b38))
-    (pin "1" (uuid 68d2df65-30c5-42c8-9a94-83c8a49a5a50))
-    (pin "14" (uuid 7da37674-e9ec-4699-baf0-2c520e0d42e6))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "X2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 100.33 86.36 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 1bb9a702-fd55-420f-9129-3f023be5eb51)
-    (property "Reference" "C43" (at 104.14 85.09 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "47n" (at 104.14 87.63 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" (at 101.2952 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 100.33 86.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "2" (uuid 12e828f1-988b-41d9-9581-992406b13027))
-    (pin "1" (uuid 0d17e1d8-4bf1-4301-a717-0ce5d0a41bc0))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "C43") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "m68k-hbc-ic:MX8315MC") (at 90.17 80.01 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4c34aaab-c926-4aac-befe-b115d9356910)
-    (property "Reference" "U24" (at 97.79 66.04 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "MX8315MC" (at 97.79 68.58 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket" (at 85.09 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://bitsavers.trailing-edge.com/components/mxic/MXIC_MX8315_Motherboard_Clock_Generator_199309.pdf" (at 85.09 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "4" (uuid f4463cb8-f699-41e9-84e1-7bb37ffb3d5b))
-    (pin "3" (uuid f3c1f33f-c2e5-4848-8cda-9877483cf0fb))
-    (pin "6" (uuid 2014f278-6c3b-4920-a710-c84daa994ce0))
-    (pin "5" (uuid 9fe356a7-a436-4af2-93bb-dea36216400d))
-    (pin "11" (uuid 94b8465c-7a2e-4d2d-abb6-25078cec4e87))
-    (pin "12" (uuid f080dfb0-cf77-4cee-8887-5433e205de45))
-    (pin "13" (uuid 2d2c91a5-51c7-4d96-a922-be565b50787e))
-    (pin "14" (uuid 582e86ef-90b3-457d-8b0a-a31549e6d63a))
-    (pin "2" (uuid 517d26f1-e1eb-47c3-bd31-799651ba83f2))
-    (pin "1" (uuid c95e7222-28a3-4e62-a38c-3a2ce59aebe7))
-    (pin "10" (uuid 70d05db4-86c8-49a5-883e-3c6ba0e1946c))
-    (pin "7" (uuid a143e019-3ea5-44e5-a5a6-a5a980f5e619))
-    (pin "8" (uuid 6f7a9463-2ede-45ae-b468-4f6d41cb4545))
-    (pin "9" (uuid 4ea98535-396f-44c9-88d5-b472237dfc9a))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "U24") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Oscillator:ACO-xxxMHz-A") (at 50.8 154.94 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4eeffafa-5fd0-44f3-993d-2589a24ce52a)
-    (property "Reference" "X3" (at 61.595 151.2921 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "3.6864M" (at 61.595 153.8321 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Oscillator:Oscillator_DIP-14" (at 62.23 163.83 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf" (at 43.815 151.765 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "8" (uuid d1e62d22-65e9-41d7-b20a-29677e66dab9))
-    (pin "7" (uuid c42d46a0-87a0-4f8d-8767-c67ecdeaf8c6))
-    (pin "1" (uuid e5a40e4f-72b3-4cf5-914b-943df04ab11b))
-    (pin "14" (uuid c24cadef-c3ce-40dd-bcfd-8fee14590701))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "X3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 88.9 67.31 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 95c5fcb9-6434-467d-b607-fd06aa1d6748)
-    (property "Reference" "#PWR0108" (at 88.9 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 88.9 62.23 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 88.9 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 88.9 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 61c44efe-c916-4486-ba69-6523860bc5ae))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "#PWR0108") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Oscillator:ACO-xxxMHz-A") (at 50.8 176.53 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid b0a6f0c7-3056-4a71-ac97-74ee5709f4df)
-    (property "Reference" "X4" (at 61.595 172.8821 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "8M" (at 61.595 175.4221 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Oscillator:Oscillator_DIP-14" (at 62.23 185.42 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf" (at 43.815 173.355 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "8" (uuid d5fc3a8b-4738-4398-b9f3-a0731bd041af))
-    (pin "7" (uuid 0f1dcda4-df30-4de2-b3bd-4ffc24b5e7f3))
-    (pin "1" (uuid 10c5b0a6-6cca-4543-a3d3-95df485342a2))
-    (pin "14" (uuid 56642def-9993-4497-ac7f-1f535c624175))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "X4") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 91.44 95.25 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b0f7401a-f2d1-4cdd-9cb7-2f6bb183c371)
-    (property "Reference" "#PWR0110" (at 91.44 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 91.44 100.33 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 91.44 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 91.44 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 54e8cfc4-3252-4e9d-8ec7-26c7e58cf37d))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "#PWR0110") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 49.53 124.46 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b7f38f1f-2e6a-4eb6-be78-2e709ab399ce)
-    (property "Reference" "#PWR0201" (at 49.53 128.27 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 49.53 119.38 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 49.53 124.46 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 49.53 124.46 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid bd1ee496-e155-4acb-af91-5e1c398ade2a))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "#PWR0201") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 49.53 139.7 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d65cb6fc-8b2a-49ca-9648-fdc4bbc3f030)
-    (property "Reference" "#PWR0202" (at 49.53 146.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 49.53 144.78 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 49.53 139.7 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 49.53 139.7 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1f7dcb8d-2400-4d0c-841a-59359cc626db))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "#PWR0202") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:Crystal") (at 62.23 67.31 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid d93ba771-68c1-486f-b0d9-d1ebcc753ca3)
-    (property "Reference" "Y1" (at 62.23 59.69 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "14.31818M" (at 62.23 62.23 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Crystal:Crystal_HC49-4H_Vertical" (at 62.23 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 62.23 67.31 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 56c775e1-c1fb-4cd0-8955-27aab490049d))
-    (pin "2" (uuid 41620416-e305-4f2a-af79-47a9e7c4dbaa))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "Y1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 100.33 90.17 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid f30ef8f4-e909-488d-b958-0ad427d3e597)
-    (property "Reference" "#PWR0109" (at 100.33 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 100.33 95.25 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 100.33 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 100.33 90.17 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b3297d83-14af-4be4-9a68-fc5e6c404f1c))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "#PWR0109") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Oscillator:ACO-xxxMHz-A") (at 49.53 132.08 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid f9926c29-a0c2-4822-a039-4a3cda1faa8d)
-    (property "Reference" "X1" (at 57.785 128.4321 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "10M" (at 57.785 130.9721 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Oscillator:Oscillator_DIP-14" (at 60.96 140.97 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf" (at 42.545 128.905 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "8" (uuid 1aafdced-a7d2-4669-aba6-92b1b7006681))
-    (pin "7" (uuid b41988e5-ac7a-4222-a285-823fe5bc3cbc))
-    (pin "1" (uuid 4f95660e-811b-4065-9486-e55128eb71d7))
-    (pin "14" (uuid 3197d9dd-2a7c-427d-8cdf-85a8545b7d2a))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
-          (reference "X1") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "12fceb62-b597-4df6-9beb-9c7751ae3e44")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:Crystal"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Y"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Crystal"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Two pin crystal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "quartz ceramic resonator oscillator"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Crystal*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Crystal_0_1"
+				(rectangle
+					(start -1.143 2.54)
+					(end 1.143 -2.54)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.905 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.905 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Crystal_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Oscillator:ACO-xxxMHz-A"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "X"
+				(at -5.08 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "ACO-xxxMHz-A"
+				(at 1.27 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Oscillator:Oscillator_DIP-14"
+				(at 11.43 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf"
+				(at -6.985 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "HCMOS Crystal Clock Oscillator, DIP14-style metal package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Crystal Clock Oscillator"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Oscillator*DIP*14*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ACO-xxxMHz-A_0_1"
+				(rectangle
+					(start -10.16 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.985 2.54) (xy -6.35 2.54) (xy -6.35 3.81) (xy -5.715 3.81) (xy -5.715 2.54) (xy -5.08 2.54)
+						(xy -5.08 3.81) (xy -4.445 3.81) (xy -4.445 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "ACO-xxxMHz-A_1_1"
+				(pin input line
+					(at -12.7 0 0)
+					(length 2.54)
+					(name "Tri-State"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "Vcc"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "m68k-hbc-ic:MX8315MC"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -21.59 15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MX8315MC"
+				(at -5.08 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+				(at -5.08 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://bitsavers.trailing-edge.com/components/mxic/MXIC_MX8315_Motherboard_Clock_Generator_199309.pdf"
+				(at -5.08 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MX8315MC_1_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -12.7)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at 1.27 -15.24 90)
+					(length 2.54)
+					(name "AGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "CAP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "S0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -7.62 0)
+					(length 2.54)
+					(name "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -10.16 0)
+					(length 2.54)
+					(name "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 1.27 12.7 270)
+					(length 2.54)
+					(name "AVDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "XO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "XI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output clock
+					(at 10.16 7.62 180)
+					(length 2.54)
+					(name "XCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output clock
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "PCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "~{LOP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -1.27 -15.24 90)
+					(length 2.54)
+					(name "DGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output clock
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "CK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -1.27 12.7 270)
+					(length 2.54)
+					(name "DVDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+5V"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 88.9 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "359d3366-2396-40d0-a916-08c647901b91")
+	)
+	(junction
+		(at 91.44 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "81d9e5bb-d652-4e9e-9f40-82d63763cc49")
+	)
+	(wire
+		(pts
+			(xy 57.15 132.08) (xy 58.42 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96c2f1ba-2430-4a0e-93ed-dd07ee57d21f")
+	)
+	(wire
+		(pts
+			(xy 91.44 95.25) (xy 88.9 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9f86e61-235c-46da-91cb-f8d44f63a8d6")
+	)
+	(wire
+		(pts
+			(xy 88.9 67.31) (xy 91.44 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6843781-26cf-4e5a-bbb3-1625c54af295")
+	)
+	(text "MC68030@25/33/50MHz\nMC68882@=MC68030\nMC68681@3.6864MHz\nMC68901@=MC68681\nMC68440@10MHz\nMC146818@32.768kHz\nPC8477BV@24MHz\nVT82C42@12MHz\nMX8315MC@14.31818MHz\nISABUS@8MHz\n\n3.6864MHz\n14.31818MHz -> 25/33/50Mhz, 12MHz, 24MHz, 8MHz\n32.768kHz\n10MHz\n"
+		(exclude_from_sim no)
+		(at 16.51 46.355 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "27b62dba-28ec-4d95-b04f-33a710505176")
+	)
+	(global_label "SYSREFCLK"
+		(shape output)
+		(at 97.79 157.48 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1e5e5258-8268-447a-a236-9609cdb11208")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 111.3585 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "4MHz"
+		(shape output)
+		(at 99.06 133.35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "33d1d2a8-97a1-4d9b-a4e8-baa40d5217c5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 107.0647 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "14.31818MHz"
+		(shape input)
+		(at 97.79 157.48 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "41665009-5523-4bfd-a072-511474578d0b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 81.9235 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "3.6864MHz"
+		(shape output)
+		(at 58.42 154.94 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4b6ceda5-ca7a-4721-882b-b157bcf25392")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.8675 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "8MHz"
+		(shape output)
+		(at 58.42 176.53 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5d20a08b-1dc6-4916-bb7a-8bb59f7f275c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.4247 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "10MHz"
+		(shape output)
+		(at 57.785 132.08 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5d54d895-2ed2-4aac-a336-5f35c55f4472")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.9992 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ISACLK"
+		(shape output)
+		(at 99.06 162.56 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "87c79932-872c-4ed7-9d1e-47c401b5cffa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 108.5162 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "14.31818MHz"
+		(shape output)
+		(at 100.33 72.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "95ba312a-52bb-4dd6-8bad-d379ae950bd8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.1965 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FREQ_SEL2"
+		(shape input)
+		(at 80.01 90.17 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a9df2074-6cbd-4b04-9d0d-015bb2ef56d5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.623 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "8MHz"
+		(shape input)
+		(at 99.06 162.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b31c2de6-5e89-4da4-9913-09643facd6bb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.0553 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FREQ_SEL1"
+		(shape input)
+		(at 80.01 87.63 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b9bdc97b-364d-46fb-9ee6-b3f6ed86dc1c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.623 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "24MHz"
+		(shape output)
+		(at 100.33 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bd75ecfc-4856-407f-87c5-d6c236106d13")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 109.5442 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FREQ_SEL0"
+		(shape input)
+		(at 80.01 85.09 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bf007ddd-72a6-474a-82fe-be365aaa9305")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.623 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PROC_CLK"
+		(shape output)
+		(at 100.33 77.47 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d534eed6-2441-424b-99b6-57d310c8bad3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.9914 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Oscillator:ACO-xxxMHz-A")
+		(at 91.44 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ed4f084-ace8-407c-966f-5deda1a1a563")
+		(property "Reference" "X2"
+			(at 102.235 129.7021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4M"
+			(at 102.235 132.2421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_DIP-14"
+			(at 102.87 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf"
+			(at 84.455 130.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "e648cc3c-bd6b-4ea0-8aff-050d00ffb1cd")
+		)
+		(pin "7"
+			(uuid "bbced21d-3ac6-445f-9682-2a3a48161b38")
+		)
+		(pin "1"
+			(uuid "68d2df65-30c5-42c8-9a94-83c8a49a5a50")
+		)
+		(pin "14"
+			(uuid "7da37674-e9ec-4699-baf0-2c520e0d42e6")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "X2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 100.33 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1bb9a702-fd55-420f-9129-3f023be5eb51")
+		(property "Reference" "C24"
+			(at 104.14 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47n"
+			(at 104.14 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+			(at 101.2952 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "12e828f1-988b-41d9-9581-992406b13027")
+		)
+		(pin "1"
+			(uuid "0d17e1d8-4bf1-4301-a717-0ce5d0a41bc0")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "m68k-hbc-ic:MX8315MC")
+		(at 90.17 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4c34aaab-c926-4aac-befe-b115d9356910")
+		(property "Reference" "U15"
+			(at 97.79 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MX8315MC"
+			(at 97.79 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm_Socket"
+			(at 85.09 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://bitsavers.trailing-edge.com/components/mxic/MXIC_MX8315_Motherboard_Clock_Generator_199309.pdf"
+			(at 85.09 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "f4463cb8-f699-41e9-84e1-7bb37ffb3d5b")
+		)
+		(pin "3"
+			(uuid "f3c1f33f-c2e5-4848-8cda-9877483cf0fb")
+		)
+		(pin "6"
+			(uuid "2014f278-6c3b-4920-a710-c84daa994ce0")
+		)
+		(pin "5"
+			(uuid "9fe356a7-a436-4af2-93bb-dea36216400d")
+		)
+		(pin "11"
+			(uuid "94b8465c-7a2e-4d2d-abb6-25078cec4e87")
+		)
+		(pin "12"
+			(uuid "f080dfb0-cf77-4cee-8887-5433e205de45")
+		)
+		(pin "13"
+			(uuid "2d2c91a5-51c7-4d96-a922-be565b50787e")
+		)
+		(pin "14"
+			(uuid "582e86ef-90b3-457d-8b0a-a31549e6d63a")
+		)
+		(pin "2"
+			(uuid "517d26f1-e1eb-47c3-bd31-799651ba83f2")
+		)
+		(pin "1"
+			(uuid "c95e7222-28a3-4e62-a38c-3a2ce59aebe7")
+		)
+		(pin "10"
+			(uuid "70d05db4-86c8-49a5-883e-3c6ba0e1946c")
+		)
+		(pin "7"
+			(uuid "a143e019-3ea5-44e5-a5a6-a5a980f5e619")
+		)
+		(pin "8"
+			(uuid "6f7a9463-2ede-45ae-b468-4f6d41cb4545")
+		)
+		(pin "9"
+			(uuid "4ea98535-396f-44c9-88d5-b472237dfc9a")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "U15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Oscillator:ACO-xxxMHz-A")
+		(at 50.8 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4eeffafa-5fd0-44f3-993d-2589a24ce52a")
+		(property "Reference" "X3"
+			(at 61.595 151.2921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3.6864M"
+			(at 61.595 153.8321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_DIP-14"
+			(at 62.23 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf"
+			(at 43.815 151.765 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "d1e62d22-65e9-41d7-b20a-29677e66dab9")
+		)
+		(pin "7"
+			(uuid "c42d46a0-87a0-4f8d-8767-c67ecdeaf8c6")
+		)
+		(pin "1"
+			(uuid "e5a40e4f-72b3-4cf5-914b-943df04ab11b")
+		)
+		(pin "14"
+			(uuid "c24cadef-c3ce-40dd-bcfd-8fee14590701")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "X3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 88.9 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "95c5fcb9-6434-467d-b607-fd06aa1d6748")
+		(property "Reference" "#PWR087"
+			(at 88.9 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 88.9 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61c44efe-c916-4486-ba69-6523860bc5ae")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Oscillator:ACO-xxxMHz-A")
+		(at 50.8 176.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b0a6f0c7-3056-4a71-ac97-74ee5709f4df")
+		(property "Reference" "X4"
+			(at 61.595 172.8821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "8M"
+			(at 61.595 175.4221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_DIP-14"
+			(at 62.23 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf"
+			(at 43.815 173.355 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "d5fc3a8b-4738-4398-b9f3-a0731bd041af")
+		)
+		(pin "7"
+			(uuid "0f1dcda4-df30-4de2-b3bd-4ffc24b5e7f3")
+		)
+		(pin "1"
+			(uuid "10c5b0a6-6cca-4543-a3d3-95df485342a2")
+		)
+		(pin "14"
+			(uuid "56642def-9993-4497-ac7f-1f535c624175")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "X4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0f7401a-f2d1-4cdd-9cb7-2f6bb183c371")
+		(property "Reference" "#PWR089"
+			(at 91.44 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54e8cfc4-3252-4e9d-8ec7-26c7e58cf37d")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "#PWR089")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 49.53 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7f38f1f-2e6a-4eb6-be78-2e709ab399ce")
+		(property "Reference" "#PWR090"
+			(at 49.53 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 49.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bd1ee496-e155-4acb-af91-5e1c398ade2a")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "#PWR090")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 49.53 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d65cb6fc-8b2a-49ca-9648-fdc4bbc3f030")
+		(property "Reference" "#PWR091"
+			(at 49.53 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 49.53 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f7dcb8d-2400-4d0c-841a-59359cc626db")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Crystal")
+		(at 62.23 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d93ba771-68c1-486f-b0d9-d1ebcc753ca3")
+		(property "Reference" "Y1"
+			(at 62.23 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "14.31818M"
+			(at 62.23 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_HC49-4H_Vertical"
+			(at 62.23 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 62.23 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 62.23 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "56c775e1-c1fb-4cd0-8955-27aab490049d")
+		)
+		(pin "2"
+			(uuid "41620416-e305-4f2a-af79-47a9e7c4dbaa")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "Y1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.33 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f30ef8f4-e909-488d-b958-0ad427d3e597")
+		(property "Reference" "#PWR088"
+			(at 100.33 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3297d83-14af-4be4-9a68-fc5e6c404f1c")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "#PWR088")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Oscillator:ACO-xxxMHz-A")
+		(at 49.53 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f9926c29-a0c2-4822-a039-4a3cda1faa8d")
+		(property "Reference" "X1"
+			(at 57.785 128.4321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10M"
+			(at 57.785 130.9721 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_DIP-14"
+			(at 60.96 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.conwin.com/datasheets/cx/cx030.pdf"
+			(at 42.545 128.905 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "1aafdced-a7d2-4669-aba6-92b1b7006681")
+		)
+		(pin "7"
+			(uuid "b41988e5-ac7a-4222-a285-823fe5bc3cbc")
+		)
+		(pin "1"
+			(uuid "4f95660e-811b-4065-9486-e55128eb71d7")
+		)
+		(pin "14"
+			(uuid "3197d9dd-2a7c-427d-8cdf-85a8545b7d2a")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/ca222314-2146-4a02-84e1-2494e581d5ec"
+					(reference "X1")
+					(unit 1)
+				)
+			)
+		)
+	)
 )

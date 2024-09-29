@@ -1,572 +1,1260 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid e910d5a4-fa64-450e-b748-cf3a61fb2249)
-
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Mechanical:MountingHole_Pad" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 0 6.35 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "MountingHole_Pad" (at 0 4.445 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "mounting hole" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Mounting Hole with connection" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "MountingHole*Pad*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "MountingHole_Pad_0_1"
-        (circle (center 0 1.27) (radius 1.27)
-          (stroke (width 1.27) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "MountingHole_Pad_1_1"
-        (pin input line (at 0 -2.54 90) (length 2.54)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 165.1 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 516690f1-e385-47d8-b8ea-2947d8ae89f9)
-    (property "Reference" "H8" (at 167.64 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 167.64 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 165.1 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 165.1 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 315e2ea6-587b-4cb6-88b1-0af8a60a4f7d))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H8") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 129.54 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 67e6fbb1-cf59-469d-b668-9ec3fc763685)
-    (property "Reference" "H4" (at 132.08 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 132.08 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 129.54 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 129.54 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 52e40850-852d-48af-9d4b-c316e1dae154))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H4") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 102.87 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 79640229-bd4e-461f-b099-0552426fa827)
-    (property "Reference" "H1" (at 105.41 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 105.41 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 102.87 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 102.87 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 999bbc97-23c7-4f98-a2b8-9d9178bde5b0))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 138.43 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 89f2022d-3df8-4379-8981-284bdf1bc61b)
-    (property "Reference" "H5" (at 140.97 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 140.97 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 138.43 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 138.43 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0904bf4a-7d6d-476c-8a6e-04d9cd15ac11))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H5") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 120.65 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid a4b200bc-ce30-47c9-b4d8-ae288da0b5da)
-    (property "Reference" "H3" (at 123.19 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 123.19 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 120.65 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 120.65 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 7e196397-3e2a-4758-9cba-29a8e9a654d4))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 156.21 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b788c3c5-7588-44b1-8208-4e12a78b680f)
-    (property "Reference" "H7" (at 158.75 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 158.75 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 156.21 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 156.21 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid e421d5ea-111e-4bcd-bf2e-3cbe89ebd2e6))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H7") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 111.76 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e50c8188-4b14-4fe9-91db-f2dd43977574)
-    (property "Reference" "H2" (at 114.3 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 114.3 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 111.76 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 111.76 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 7880ef22-0fb7-4768-bcca-13f0ccaa5b01))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 147.32 186.69 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid e621bf35-1f53-4164-8471-1b6089a2fffe)
-    (property "Reference" "H6" (at 149.86 184.15 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "MH" (at 149.86 186.69 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad" (at 147.32 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 147.32 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b2071645-d872-44bd-9921-2ff8d414d9ce))
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
-          (reference "H6") (unit 1)
-        )
-      )
-    )
-  )
-
-  (sheet (at 243.84 82.55) (size 30.48 35.56) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 1e31ec6d-0f1f-4881-b8d4-c909198fd9d9)
-    (property "Sheetname" "rtc" (at 243.84 81.8384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "rtc.kicad_sch" (at 243.84 118.6946 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "13"))
-      )
-    )
-  )
-
-  (sheet (at 24.13 171.45) (size 33.02 25.4) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 40562e04-f410-4acf-979e-5a3346ff1c02)
-    (property "Sheetname" "expansion" (at 24.13 170.7384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "expansion.kicad_sch" (at 24.13 197.4346 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "20"))
-      )
-    )
-  )
-
-  (sheet (at 205.74 133.35) (size 29.21 26.67) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 554c73e9-be3f-443d-9639-26aa05598e60)
-    (property "Sheetname" "glue" (at 205.74 132.6384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "glue.kicad_sch" (at 205.74 160.6046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "18"))
-      )
-    )
-  )
-
-  (sheet (at 29.21 19.05) (size 43.18 45.72) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 55816bff-ff57-4d16-9b32-05ebf526eb32)
-    (property "Sheetname" "cpu" (at 29.21 18.3384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "cpu.kicad_sch" (at 29.21 65.3546 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "2"))
-      )
-    )
-  )
-
-  (sheet (at 58.42 133.35) (size 21.59 24.13) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 58ec99b7-93d1-49e2-ae3b-ce53a759d5cc)
-    (property "Sheetname" "video" (at 58.42 132.6384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "video.kicad_sch" (at 58.42 158.0646 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "17"))
-      )
-    )
-  )
-
-  (sheet (at 20.32 129.54) (size 30.48 21.59) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 5b20a555-1272-4400-b306-9ac30ef27e57)
-    (property "Sheetname" "power" (at 20.32 128.8284 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "power.kicad_sch" (at 20.32 151.7146 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "12"))
-      )
-    )
-  )
-
-  (sheet (at 128.27 83.82) (size 31.75 33.02) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 6a41e17c-36ae-4125-a7a2-d2c0c10da4d6)
-    (property "Sheetname" "floppy" (at 128.27 83.1084 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "floppy.kicad_sch" (at 128.27 117.4246 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "8"))
-      )
-    )
-  )
-
-  (sheet (at 33.02 77.47) (size 33.02 43.18) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 7316b682-6773-4712-817d-421b3c554ac7)
-    (property "Sheetname" "buffer" (at 33.02 76.7584 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "buffer.kicad_sch" (at 33.02 121.2346 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "6"))
-      )
-    )
-  )
-
-  (sheet (at 224.79 21.59) (size 34.29 41.91) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 792df1bb-e6c1-4138-ba8b-dae364f75afe)
-    (property "Sheetname" "ps2kbms" (at 224.79 20.8784 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "ps2kbms.kicad_sch" (at 224.79 64.0846 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "10"))
-      )
-    )
-  )
-
-  (sheet (at 83.82 21.59) (size 38.1 41.91) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 7f08698a-5591-4edf-92a5-c53d8053eae6)
-    (property "Sheetname" "flash" (at 83.82 20.8784 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "flash.kicad_sch" (at 83.82 64.0846 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "3"))
-      )
-    )
-  )
-
-  (sheet (at 242.57 133.35) (size 26.67 26.67) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 903f9606-a6b2-43d2-867a-0bdb5879f41d)
-    (property "Sheetname" "audio" (at 242.57 132.6384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "audio.kicad_sch" (at 242.57 160.6046 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "19"))
-      )
-    )
-  )
-
-  (sheet (at 92.71 133.35) (size 33.02 27.94) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 97540a9a-4fd7-4fa6-8cbe-7d2901fcc971)
-    (property "Sheetname" "dmac0" (at 92.71 132.6384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "dmac0.kicad_sch" (at 92.71 161.8746 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "16"))
-      )
-    )
-  )
-
-  (sheet (at 134.62 133.35) (size 33.02 27.94) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid ba0dc65b-4233-41d9-ae76-19e0f25a7314)
-    (property "Sheetname" "dmac1" (at 134.62 132.6384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "dmac1.kicad_sch" (at 134.62 161.8746 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "14"))
-      )
-    )
-  )
-
-  (sheet (at 85.09 80.01) (size 29.21 40.64) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid c31fb516-9ad6-4f11-954c-fe79f07755e7)
-    (property "Sheetname" "serial" (at 85.09 79.2984 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "serial.kicad_sch" (at 85.09 121.2346 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "7"))
-      )
-    )
-  )
-
-  (sheet (at 179.07 21.59) (size 36.83 44.45) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid c4cd8f10-d1eb-4a99-9432-3d36759d5383)
-    (property "Sheetname" "isa" (at 179.07 20.8784 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "isa.kicad_sch" (at 179.07 66.6246 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "5"))
-      )
-    )
-  )
-
-  (sheet (at 208.28 81.28) (size 30.48 38.1) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid ca222314-2146-4a02-84e1-2494e581d5ec)
-    (property "Sheetname" "clock" (at 208.28 80.5684 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "clock.kicad_sch" (at 208.28 119.9646 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "11"))
-      )
-    )
-  )
-
-  (sheet (at 170.18 81.28) (size 27.94 38.1) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid d97c5e05-a9fe-4024-9910-08c694bcb754)
-    (property "Sheetname" "ide" (at 170.18 80.5684 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "ide.kicad_sch" (at 170.18 119.9646 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "9"))
-      )
-    )
-  )
-
-  (sheet (at 171.45 135.89) (size 27.94 20.32) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid e1e0828e-59af-41a8-ba1a-7fad83581e05)
-    (property "Sheetname" "timer_irqc" (at 171.45 135.1784 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "timer_irqc.kicad_sch" (at 171.45 156.7946 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "17"))
-      )
-    )
-  )
-
-  (sheet (at 132.08 22.86) (size 33.02 41.91) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid fc19f8fc-7e60-4aba-a390-87e70b0ad3c0)
-    (property "Sheetname" "dram" (at 132.08 22.1484 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "dram.kicad_sch" (at 132.08 65.3546 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "proto1"
-        (path "/e910d5a4-fa64-450e-b748-cf3a61fb2249" (page "4"))
-      )
-    )
-  )
-
-  (sheet_instances
-    (path "/" (page "1"))
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "e910d5a4-fa64-450e-b748-cf3a61fb2249")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 165.1 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "516690f1-e385-47d8-b8ea-2947d8ae89f9")
+		(property "Reference" "H8"
+			(at 167.64 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 167.64 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 165.1 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "315e2ea6-587b-4cb6-88b1-0af8a60a4f7d")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 129.54 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "67e6fbb1-cf59-469d-b668-9ec3fc763685")
+		(property "Reference" "H4"
+			(at 132.08 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 132.08 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 129.54 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "52e40850-852d-48af-9d4b-c316e1dae154")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 102.87 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79640229-bd4e-461f-b099-0552426fa827")
+		(property "Reference" "H1"
+			(at 105.41 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 105.41 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 102.87 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 102.87 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 102.87 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "999bbc97-23c7-4f98-a2b8-9d9178bde5b0")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 138.43 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "89f2022d-3df8-4379-8981-284bdf1bc61b")
+		(property "Reference" "H5"
+			(at 140.97 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 140.97 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 138.43 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0904bf4a-7d6d-476c-8a6e-04d9cd15ac11")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 120.65 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a4b200bc-ce30-47c9-b4d8-ae288da0b5da")
+		(property "Reference" "H3"
+			(at 123.19 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 123.19 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 120.65 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7e196397-3e2a-4758-9cba-29a8e9a654d4")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 156.21 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b788c3c5-7588-44b1-8208-4e12a78b680f")
+		(property "Reference" "H7"
+			(at 158.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 158.75 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 156.21 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 156.21 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e421d5ea-111e-4bcd-bf2e-3cbe89ebd2e6")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 111.76 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e50c8188-4b14-4fe9-91db-f2dd43977574")
+		(property "Reference" "H2"
+			(at 114.3 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 114.3 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 111.76 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 111.76 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 111.76 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7880ef22-0fb7-4768-bcca-13f0ccaa5b01")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 147.32 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e621bf35-1f53-4164-8471-1b6089a2fffe")
+		(property "Reference" "H6"
+			(at 149.86 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MH"
+			(at 149.86 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+			(at 147.32 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b2071645-d872-44bd-9921-2ff8d414d9ce")
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 91.44 25.4)
+		(size 21.59 22.86)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1e31ec6d-0f1f-4881-b8d4-c909198fd9d9")
+		(property "Sheetname" "rtc"
+			(at 91.44 24.6884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rtc.kicad_sch"
+			(at 91.44 48.8446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 223.52 38.1)
+		(size 27.94 22.86)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "27af5ad9-2b85-4b38-a7d8-d2ae23d88c8c")
+		(property "Sheetname" "fpga"
+			(at 223.52 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fpga.kicad_sch"
+			(at 223.52 61.5446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "27")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.32 139.7)
+		(size 33.02 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "40562e04-f410-4acf-979e-5a3346ff1c02")
+		(property "Sheetname" "expansion"
+			(at 20.32 138.9884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "expansion.kicad_sch"
+			(at 20.32 165.6846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "20")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 205.74 133.35)
+		(size 29.21 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "554c73e9-be3f-443d-9639-26aa05598e60")
+		(property "Sheetname" "glue"
+			(at 205.74 132.6384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "glue.kicad_sch"
+			(at 205.74 160.6046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "18")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 60.96 49.53)
+		(size 22.86 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "55816bff-ff57-4d16-9b32-05ebf526eb32")
+		(property "Sheetname" "cpu"
+			(at 60.96 48.8184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "cpu.kicad_sch"
+			(at 60.96 70.4346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at -3.81 0)
+		(size 30.48 21.59)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5b20a555-1272-4400-b306-9ac30ef27e57")
+		(property "Sheetname" "power"
+			(at -3.81 -0.7116 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at -3.81 22.1746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 128.27 83.82)
+		(size 22.86 19.05)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6a41e17c-36ae-4125-a7a2-d2c0c10da4d6")
+		(property "Sheetname" "floppy"
+			(at 128.27 83.1084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "floppy.kicad_sch"
+			(at 128.27 103.4546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 240.03 87.63)
+		(size 27.94 35.56)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "71e55d02-566d-4833-bd12-81a0b57e0881")
+		(property "Sheetname" "dmac"
+			(at 240.03 86.9184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dmac.kicad_sch"
+			(at 240.03 123.7746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "28")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 127 135.89)
+		(size 19.05 15.24)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "792df1bb-e6c1-4138-ba8b-dae364f75afe")
+		(property "Sheetname" "i8242"
+			(at 127 135.1784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "i8242.kicad_sch"
+			(at 127 151.7146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 116.84 27.94)
+		(size 16.51 16.51)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7f08698a-5591-4edf-92a5-c53d8053eae6")
+		(property "Sheetname" "flash"
+			(at 116.84 27.2284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "flash.kicad_sch"
+			(at 116.84 45.0346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 198.12 74.93)
+		(size 26.67 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "903f9606-a6b2-43d2-867a-0bdb5879f41d")
+		(property "Sheetname" "audio"
+			(at 198.12 74.2184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "audio.kicad_sch"
+			(at 198.12 102.1846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "19")
+				)
+			)
+		)
+	)
+	(sheet
+		(at -5.08 73.66)
+		(size 29.21 22.86)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c31fb516-9ad6-4f11-954c-fe79f07755e7")
+		(property "Sheetname" "serial"
+			(at -5.08 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "serial.kicad_sch"
+			(at -5.08 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 95.25 73.66)
+		(size 24.13 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c4cd8f10-d1eb-4a99-9432-3d36759d5383")
+		(property "Sheetname" "isa"
+			(at 95.25 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "isa.kicad_sch"
+			(at 95.25 99.6446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 31.75 26.67)
+		(size 22.86 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ca222314-2146-4a02-84e1-2494e581d5ec")
+		(property "Sheetname" "clock"
+			(at 31.75 25.9584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "clock.kicad_sch"
+			(at 31.75 47.5746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 29.21 74.93)
+		(size 27.94 20.32)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e1e0828e-59af-41a8-ba1a-7fad83581e05")
+		(property "Sheetname" "timer_irqc"
+			(at 29.21 74.2184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "timer_irqc.kicad_sch"
+			(at 29.21 95.8346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "17")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 137.16 27.94)
+		(size 17.78 16.51)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fc19f8fc-7e60-4aba-a390-87e70b0ad3c0")
+		(property "Sheetname" "dram"
+			(at 137.16 27.2284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dram.kicad_sch"
+			(at 137.16 45.0346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "proto1"
+				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )

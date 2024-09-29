@@ -1,0 +1,9 @@
+*.ghw
+*.cf
+*.o
+sim_build
+chipset
+results.xml
+testbench
+top
+report.json
