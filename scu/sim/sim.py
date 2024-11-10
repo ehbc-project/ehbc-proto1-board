@@ -42,6 +42,7 @@ class MC68030:
             await RisingEdge(self.dut.o_clk)
             
         self.dut.i_nrst.value = Logic('1')
+        self.ipl_status = 0
     
     async def read(self, asp: AddressSpace, addr: int, size: int = 0, burst: bool = False) -> dict:
         if size not in [1, 2, 4] and not burst:
@@ -264,12 +265,25 @@ class MC68030:
             self.dut.i_nas.value = Logic('1')
             self.dut.i_nds.value = Logic('1')
         
+        self.dut.io_d.value = Release()
         io_result["end_ns"] = get_sim_time("ns")
         
         return io_result
+        
+    async def check_irq(self):
+        ipl_status = str(self.dut.o_nipl.value).replace('Z', '1')
+        ipl_status = ~int(ipl_status, base=2) & 0x07
+        self.ipl_status = ipl_status
+        
+        if ipl_status != 0 and self.ipl_status < ipl_status:
+            return await self.read(MC68030.AddressSpace.CPU_SPACE, 0xFFFFFFF1 | (ipl_status << 1), 1)
+        else:
+            return None
+        
 
 @cocotb.test
 async def test_basic(dut):
+    init_signal(dut)
     cpu = MC68030(dut)
     await cpu.reset()
     
@@ -288,9 +302,16 @@ async def test_basic(dut):
                 result = await cpu.read(MC68030.AddressSpace.SUPER_DATA, int(line[1], base=16), burst=True)
             elif line[0] == 'W':
                 result = await cpu.write(MC68030.AddressSpace.SUPER_DATA, int(line[2], base=16), int(line[1]), int(line[3], base=16))
+            else:
+                continue
             
             result["line"] = line_num
             results.append(result)
+            
+            result = await cpu.check_irq()
+            if result != None:
+                results.append(result)
+            
                 
     with open('report.json', 'w') as report:
         report.write(json.dumps(results, indent=4))

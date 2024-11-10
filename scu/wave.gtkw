@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Wed Sep 25 15:20:33 2024
+[*] Sun Nov 10 04:16:28 2024
 [*]
 [dumpfile] "/Volumes/Disk/Projects/ehbc-proto1-board/scu/wave.ghw"
-[dumpfile_mtime] "Wed Sep 25 15:11:14 2024"
-[dumpfile_size] 918269
+[dumpfile_mtime] "Sun Nov 10 04:16:13 2024"
+[dumpfile_size] 820226
 [savefile] "/Volumes/Disk/Projects/ehbc-proto1-board/scu/wave.gtkw"
-[timestart] 91937000000
+[timestart] 79540000000
 [size] 1800 1097
 [pos] -1 -1
-*-28.916199 92714000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+*-32.916199 86144200000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 [markername] AA
 [markername] BB
 [markername] CC
@@ -40,8 +40,8 @@
 [treeopen] top.testbench.
 [treeopen] top.testbench.top.
 [treeopen] top.testbench.top.addr_decoder.
-[treeopen] top.testbench.top.fmcb.
-[treeopen] top.testbench.top.isab.isar.
+[treeopen] top.testbench.top.timer.
+[treeopen] top.testbench.top.timer.timer_channela.
 [sst_width] 291
 [signals_width] 392
 [sst_expanded] 1
@@ -102,22 +102,22 @@ top.testbench.o_ncback
 top.testbench.o_nci
 @1000200
 -CPU Interface Signals
-@c00201
+@c00200
 -DRAM Interface Signals
-@23
+@22
 #{top.testbench.top.o_ma[11:0]} top.testbench.top.o_ma[11] top.testbench.top.o_ma[10] top.testbench.top.o_ma[9] top.testbench.top.o_ma[8] top.testbench.top.o_ma[7] top.testbench.top.o_ma[6] top.testbench.top.o_ma[5] top.testbench.top.o_ma[4] top.testbench.top.o_ma[3] top.testbench.top.o_ma[2] top.testbench.top.o_ma[1] top.testbench.top.o_ma[0]
 #{top.testbench.top.o_ncas[3:0]} top.testbench.top.o_ncas[3] top.testbench.top.o_ncas[2] top.testbench.top.o_ncas[1] top.testbench.top.o_ncas[0]
 #{top.testbench.top.o_nras[7:0]} top.testbench.top.o_nras[7] top.testbench.top.o_nras[6] top.testbench.top.o_nras[5] top.testbench.top.o_nras[4] top.testbench.top.o_nras[3] top.testbench.top.o_nras[2] top.testbench.top.o_nras[1] top.testbench.top.o_nras[0]
-@29
+@28
 top.testbench.top.o_npagehit
 top.testbench.top.i_nrefresh
-@1401201
+@1401200
 -DRAM Interface Signals
 @c00200
 -ISA Bus Signals
 @28
+top.testbench.top.i_isaclk
 top.testbench.top.i_nnows
-top.testbench.top.i_iochrdy_isa
 top.testbench.top.i_iochck
 top.testbench.top.o_ale
 top.testbench.top.o_sbhe
@@ -127,32 +127,19 @@ top.testbench.top.o_nmemr
 top.testbench.top.o_nmemw
 top.testbench.top.o_nior
 top.testbench.top.o_niow
+top.testbench.top.o_niocs16
 top.testbench.top.o_nmemcs16
-top.testbench.top.o_niocs16_isa
-top.testbench.top.o_nbufen_isa
-top.testbench.top.o_bufdir_isa
+top.testbench.top.o_nbufen
+top.testbench.top.o_bufdir
 @1401200
 -ISA Bus Signals
-@c00200
--IDE Bus Signals
-@28
-top.testbench.top.o_niocs16_ide
-top.testbench.top.i_iochrdy_ide
-top.testbench.top.o_ndior
-top.testbench.top.o_ndiow
-top.testbench.top.o_nbufen_ide
-top.testbench.top.o_bufdir_ide
-@1401200
--IDE Bus Signals
-@c00200
+@800201
 -Interrupt Controller SIgnals
-@22
+@23
 #{top.testbench.top.i_irq[19:0]} top.testbench.top.i_irq[19] top.testbench.top.i_irq[18] top.testbench.top.i_irq[17] top.testbench.top.i_irq[16] top.testbench.top.i_irq[15] top.testbench.top.i_irq[14] top.testbench.top.i_irq[13] top.testbench.top.i_irq[12] top.testbench.top.i_irq[11] top.testbench.top.i_irq[10] top.testbench.top.i_irq[9] top.testbench.top.i_irq[8] top.testbench.top.i_irq[7] top.testbench.top.i_irq[6] top.testbench.top.i_irq[5] top.testbench.top.i_irq[4] top.testbench.top.i_irq[3] top.testbench.top.i_irq[2] top.testbench.top.i_irq[1] top.testbench.top.i_irq[0]
-#{top.testbench.top.o_iack[4:0]} top.testbench.top.o_iack[4] top.testbench.top.o_iack[3] top.testbench.top.o_iack[2] top.testbench.top.o_iack[1] top.testbench.top.o_iack[0]
-@28
-top.testbench.top.o_niacken
+@29
 #{top.testbench.top.o_nipl[2:0]} top.testbench.top.o_nipl[2] top.testbench.top.o_nipl[1] top.testbench.top.o_nipl[0]
-@1401200
+@1000201
 -Interrupt Controller SIgnals
 @c00200
 -Misc Signals
@@ -162,38 +149,10 @@ top.testbench.top.o_niacken
 -Misc Signals
 @c00200
 -Registers
-@22
-#{top.testbench.top.isab.isar_data[7:0]} top.testbench.top.isab.isar_data[7] top.testbench.top.isab.isar_data[6] top.testbench.top.isab.isar_data[5] top.testbench.top.isab.isar_data[4] top.testbench.top.isab.isar_data[3] top.testbench.top.isab.isar_data[2] top.testbench.top.isab.isar_data[1] top.testbench.top.isab.isar_data[0]
-@c00022
-#{top.testbench.top.ideb.ider_data[15:0]} top.testbench.top.ideb.ider_data[15] top.testbench.top.ideb.ider_data[14] top.testbench.top.ideb.ider_data[13] top.testbench.top.ideb.ider_data[12] top.testbench.top.ideb.ider_data[11] top.testbench.top.ideb.ider_data[10] top.testbench.top.ideb.ider_data[9] top.testbench.top.ideb.ider_data[8] top.testbench.top.ideb.ider_data[7] top.testbench.top.ideb.ider_data[6] top.testbench.top.ideb.ider_data[5] top.testbench.top.ideb.ider_data[4] top.testbench.top.ideb.ider_data[3] top.testbench.top.ideb.ider_data[2] top.testbench.top.ideb.ider_data[1] top.testbench.top.ideb.ider_data[0]
-@28
-top.testbench.top.ideb.ider_data[15]
-top.testbench.top.ideb.ider_data[14]
-top.testbench.top.ideb.ider_data[13]
-top.testbench.top.ideb.ider_data[12]
-top.testbench.top.ideb.ider_data[11]
-top.testbench.top.ideb.ider_data[10]
-top.testbench.top.ideb.ider_data[9]
-top.testbench.top.ideb.ider_data[8]
-top.testbench.top.ideb.ider_data[7]
-top.testbench.top.ideb.ider_data[6]
-top.testbench.top.ideb.ider_data[5]
-top.testbench.top.ideb.ider_data[4]
-top.testbench.top.ideb.ider_data[3]
-top.testbench.top.ideb.ider_data[2]
-top.testbench.top.ideb.ider_data[1]
-top.testbench.top.ideb.ider_data[0]
+-top.testbench.top.ideb.ider_data[15:0]
 @1401200
 -group_end
 @22
-#{top.testbench.top.mcb.abr0_data[7:0]} top.testbench.top.mcb.abr0_data[7] top.testbench.top.mcb.abr0_data[6] top.testbench.top.mcb.abr0_data[5] top.testbench.top.mcb.abr0_data[4] top.testbench.top.mcb.abr0_data[3] top.testbench.top.mcb.abr0_data[2] top.testbench.top.mcb.abr0_data[1] top.testbench.top.mcb.abr0_data[0]
-#{top.testbench.top.mcb.abr1_data[7:0]} top.testbench.top.mcb.abr1_data[7] top.testbench.top.mcb.abr1_data[6] top.testbench.top.mcb.abr1_data[5] top.testbench.top.mcb.abr1_data[4] top.testbench.top.mcb.abr1_data[3] top.testbench.top.mcb.abr1_data[2] top.testbench.top.mcb.abr1_data[1] top.testbench.top.mcb.abr1_data[0]
-#{top.testbench.top.mcb.abr2_data[7:0]} top.testbench.top.mcb.abr2_data[7] top.testbench.top.mcb.abr2_data[6] top.testbench.top.mcb.abr2_data[5] top.testbench.top.mcb.abr2_data[4] top.testbench.top.mcb.abr2_data[3] top.testbench.top.mcb.abr2_data[2] top.testbench.top.mcb.abr2_data[1] top.testbench.top.mcb.abr2_data[0]
-#{top.testbench.top.mcb.abr3_data[7:0]} top.testbench.top.mcb.abr3_data[7] top.testbench.top.mcb.abr3_data[6] top.testbench.top.mcb.abr3_data[5] top.testbench.top.mcb.abr3_data[4] top.testbench.top.mcb.abr3_data[3] top.testbench.top.mcb.abr3_data[2] top.testbench.top.mcb.abr3_data[1] top.testbench.top.mcb.abr3_data[0]
-#{top.testbench.top.mcb.abr4_data[7:0]} top.testbench.top.mcb.abr4_data[7] top.testbench.top.mcb.abr4_data[6] top.testbench.top.mcb.abr4_data[5] top.testbench.top.mcb.abr4_data[4] top.testbench.top.mcb.abr4_data[3] top.testbench.top.mcb.abr4_data[2] top.testbench.top.mcb.abr4_data[1] top.testbench.top.mcb.abr4_data[0]
-#{top.testbench.top.mcb.abr5_data[7:0]} top.testbench.top.mcb.abr5_data[7] top.testbench.top.mcb.abr5_data[6] top.testbench.top.mcb.abr5_data[5] top.testbench.top.mcb.abr5_data[4] top.testbench.top.mcb.abr5_data[3] top.testbench.top.mcb.abr5_data[2] top.testbench.top.mcb.abr5_data[1] top.testbench.top.mcb.abr5_data[0]
-#{top.testbench.top.mcb.abr6_data[7:0]} top.testbench.top.mcb.abr6_data[7] top.testbench.top.mcb.abr6_data[6] top.testbench.top.mcb.abr6_data[5] top.testbench.top.mcb.abr6_data[4] top.testbench.top.mcb.abr6_data[3] top.testbench.top.mcb.abr6_data[2] top.testbench.top.mcb.abr6_data[1] top.testbench.top.mcb.abr6_data[0]
-#{top.testbench.top.mcb.abr7_data[7:0]} top.testbench.top.mcb.abr7_data[7] top.testbench.top.mcb.abr7_data[6] top.testbench.top.mcb.abr7_data[5] top.testbench.top.mcb.abr7_data[4] top.testbench.top.mcb.abr7_data[3] top.testbench.top.mcb.abr7_data[2] top.testbench.top.mcb.abr7_data[1] top.testbench.top.mcb.abr7_data[0]
 #{top.testbench.top.ccr_data[7:0]} top.testbench.top.ccr_data[7] top.testbench.top.ccr_data[6] top.testbench.top.ccr_data[5] top.testbench.top.ccr_data[4] top.testbench.top.ccr_data[3] top.testbench.top.ccr_data[2] top.testbench.top.ccr_data[1] top.testbench.top.ccr_data[0]
 @1401200
 -Registers
@@ -203,98 +162,20 @@ top.testbench.top.ideb.ider_data[0]
 -Register Values
 @c00200
 -Internal States: ROMC
-@28
-top.testbench.top.fmcb.i_en_flash
-top.testbench.top.fmcb.o_ack8
-top.testbench.top.fmcb.o_ack16
-#{top.testbench.top.fmcb.wait_count[2:0]} top.testbench.top.fmcb.wait_count[2] top.testbench.top.fmcb.wait_count[1] top.testbench.top.fmcb.wait_count[0]
-@420
-top.testbench.top.fmcb.state
 @1401200
 -Internal States: ROMC
 @c00200
 -Internal States: MEMC
-@28
-top.testbench.top.mcb.i_en_ram
-@420
-top.testbench.top.mcb.state
-top.testbench.top.mcb.refresh_state
-top.testbench.top.mcb.ma_eq_ra
-@c00022
-#{top.testbench.top.mcb.ca[11:0]} top.testbench.top.mcb.ca[11] top.testbench.top.mcb.ca[10] top.testbench.top.mcb.ca[9] top.testbench.top.mcb.ca[8] top.testbench.top.mcb.ca[7] top.testbench.top.mcb.ca[6] top.testbench.top.mcb.ca[5] top.testbench.top.mcb.ca[4] top.testbench.top.mcb.ca[3] top.testbench.top.mcb.ca[2] top.testbench.top.mcb.ca[1] top.testbench.top.mcb.ca[0]
-@28
-top.testbench.top.mcb.ca[11]
-top.testbench.top.mcb.ca[10]
-top.testbench.top.mcb.ca[9]
-top.testbench.top.mcb.ca[8]
-top.testbench.top.mcb.ca[7]
-top.testbench.top.mcb.ca[6]
-top.testbench.top.mcb.ca[5]
-top.testbench.top.mcb.ca[4]
-top.testbench.top.mcb.ca[3]
-top.testbench.top.mcb.ca[2]
-top.testbench.top.mcb.ca[1]
-top.testbench.top.mcb.ca[0]
+-top.testbench.top.mcb.ca[11:0]
 @1401200
 -group_end
-@22
-#{top.testbench.top.mcb.ra[11:0]} top.testbench.top.mcb.ra[11] top.testbench.top.mcb.ra[10] top.testbench.top.mcb.ra[9] top.testbench.top.mcb.ra[8] top.testbench.top.mcb.ra[7] top.testbench.top.mcb.ra[6] top.testbench.top.mcb.ra[5] top.testbench.top.mcb.ra[4] top.testbench.top.mcb.ra[3] top.testbench.top.mcb.ra[2] top.testbench.top.mcb.ra[1] top.testbench.top.mcb.ra[0]
-@420
-top.testbench.top.mcb.page_hit
-top.testbench.top.mcb.prev_page_valid
-@24
-#{top.testbench.top.mcb.bank[2:0]} top.testbench.top.mcb.bank[2] top.testbench.top.mcb.bank[1] top.testbench.top.mcb.bank[0]
-@420
-top.testbench.top.mcb.bank_hit
-top.testbench.top.mcb.prev_bank_valid
-@28
-top.testbench.top.mcb.ras_latch
-@88420
-top.testbench.top.mcb.delay_counter
-@420
-top.testbench.top.mcb.burst
-@28
-#{top.testbench.top.mcb.burst_addr[3:2]} top.testbench.top.mcb.burst_addr[3] top.testbench.top.mcb.burst_addr[2]
-top.testbench.top.mcb.i_burst
-@1401200
 -Internal States: MEMC
 @c00200
 -Internal States: ISACTRL
-@28
-top.testbench.top.isab.i_en_isar
-top.testbench.top.isab.ack8_isar
-top.testbench.top.isab.i_en_isa
-top.testbench.top.isab.ack8_isa
-top.testbench.top.isab.o_ack16
-top.testbench.top.isab.enable_controller
-@420
-top.testbench.top.isab.state
-@28
-top.testbench.top.isab.command_enable
-@420
-top.testbench.top.isab.xferend
-@28
-#{top.testbench.top.isab.wait_count[2:0]} top.testbench.top.isab.wait_count[2] top.testbench.top.isab.wait_count[1] top.testbench.top.isab.wait_count[0]
 @1401200
 -Internal States: ISACTRL
-@c00200
--Internal States: IDECTRL
-@28
-#{top.testbench.top.ideb.i_en_ide[1:0]} top.testbench.top.ideb.i_en_ide[1] top.testbench.top.ideb.i_en_ide[0]
-top.testbench.top.ideb.ack8_ide
-top.testbench.top.ideb.ack8_ider0
-top.testbench.top.ideb.ack8_ider1
-top.testbench.top.ideb.o_ack16
-top.testbench.top.ideb.enable_controller
-@420
-top.testbench.top.ideb.state
-@28
-top.testbench.top.ideb.i_en_ider
 @22
-#{top.testbench.top.ideb.wait_count[3:0]} top.testbench.top.ideb.wait_count[3] top.testbench.top.ideb.wait_count[2] top.testbench.top.ideb.wait_count[1] top.testbench.top.ideb.wait_count[0]
-@1401200
--Internal States: IDECTRL
-@28
-top.testbench.top.cben
+#{top.testbench.top.timer.timer_channela.tcr_data[23:0]} top.testbench.top.timer.timer_channela.tcr_data[23] top.testbench.top.timer.timer_channela.tcr_data[22] top.testbench.top.timer.timer_channela.tcr_data[21] top.testbench.top.timer.timer_channela.tcr_data[20] top.testbench.top.timer.timer_channela.tcr_data[19] top.testbench.top.timer.timer_channela.tcr_data[18] top.testbench.top.timer.timer_channela.tcr_data[17] top.testbench.top.timer.timer_channela.tcr_data[16] top.testbench.top.timer.timer_channela.tcr_data[15] top.testbench.top.timer.timer_channela.tcr_data[14] top.testbench.top.timer.timer_channela.tcr_data[13] top.testbench.top.timer.timer_channela.tcr_data[12] top.testbench.top.timer.timer_channela.tcr_data[11] top.testbench.top.timer.timer_channela.tcr_data[10] top.testbench.top.timer.timer_channela.tcr_data[9] top.testbench.top.timer.timer_channela.tcr_data[8] top.testbench.top.timer.timer_channela.tcr_data[7] top.testbench.top.timer.timer_channela.tcr_data[6] top.testbench.top.timer.timer_channela.tcr_data[5] top.testbench.top.timer.timer_channela.tcr_data[4] top.testbench.top.timer.timer_channela.tcr_data[3] top.testbench.top.timer.timer_channela.tcr_data[2] top.testbench.top.timer.timer_channela.tcr_data[1] top.testbench.top.timer.timer_channela.tcr_data[0]
+#{top.testbench.top.timer.timer_channela.timer_data[23:0]} top.testbench.top.timer.timer_channela.timer_data[23] top.testbench.top.timer.timer_channela.timer_data[22] top.testbench.top.timer.timer_channela.timer_data[21] top.testbench.top.timer.timer_channela.timer_data[20] top.testbench.top.timer.timer_channela.timer_data[19] top.testbench.top.timer.timer_channela.timer_data[18] top.testbench.top.timer.timer_channela.timer_data[17] top.testbench.top.timer.timer_channela.timer_data[16] top.testbench.top.timer.timer_channela.timer_data[15] top.testbench.top.timer.timer_channela.timer_data[14] top.testbench.top.timer.timer_channela.timer_data[13] top.testbench.top.timer.timer_channela.timer_data[12] top.testbench.top.timer.timer_channela.timer_data[11] top.testbench.top.timer.timer_channela.timer_data[10] top.testbench.top.timer.timer_channela.timer_data[9] top.testbench.top.timer.timer_channela.timer_data[8] top.testbench.top.timer.timer_channela.timer_data[7] top.testbench.top.timer.timer_channela.timer_data[6] top.testbench.top.timer.timer_channela.timer_data[5] top.testbench.top.timer.timer_channela.timer_data[4] top.testbench.top.timer.timer_channela.timer_data[3] top.testbench.top.timer.timer_channela.timer_data[2] top.testbench.top.timer.timer_channela.timer_data[1] top.testbench.top.timer.timer_channela.timer_data[0]
 [pattern_trace] 1
 [pattern_trace] 0

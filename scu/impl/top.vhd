@@ -7,135 +7,106 @@ use work.constants.all;
 
 entity top is
     port (
-        i_clk: in std_logic;
-        i_isaclk: in std_logic;
-        i_nrst: in std_logic;
+        i_clk:          in std_logic;
+        i_isaclk:       in std_logic;
+        i_nrst:         in std_logic;
 
         -- Chip Select Signals
-        o_nen_rom: out std_logic;
-        o_nen_i8042: out std_logic;
-        o_nen_rtc: out std_logic;
-        o_nen_ide: out std_logic_vector(1 downto 0);
-        o_nen_fdc: out std_logic;
-        o_nen_mfp0: out std_logic;
-        o_nen_mfp1: out std_logic;
-        o_nen_duart: out std_logic;
-        o_nen_dmac0: out std_logic;
-        o_nen_dmac1: out std_logic;
+        o_nen_flash:    out std_logic;
+        o_nen_mfp0:     out std_logic;
+        o_nen_mfp1:     out std_logic;
+        o_nen_dmac0:    out std_logic;
+        o_nen_dmac1:    out std_logic;
 
         -- Processor Interface Signals
-        i_nas: in std_logic;
-        i_nds: in std_logic;
-        i_r_nw: in std_logic;
-        i_size: in std_logic_vector(1 downto 0);
-        o_ndsack: out std_logic_vector(1 downto 0) := (others => 'Z');
-        o_nsterm: out std_logic := 'Z';
-        i_fc: in std_logic_vector(2 downto 0);
-        i_a: in std_logic_vector(31 downto 0);
-        io_d: inout std_logic_vector(7 downto 0) := (others => 'Z');
-        i_ncbreq: in std_logic;
-        o_ncback: out std_logic := '1';
-        o_nci: out std_logic;
+        i_nas:          in std_logic;
+        i_nds:          in std_logic;
+        i_r_nw:         in std_logic;
+        i_size:         in std_logic_vector(1 downto 0);
+        o_ndsack:       out std_logic_vector(1 downto 0) := (others => 'Z');
+        o_nsterm:       out std_logic := 'Z';
+        i_fc:           in std_logic_vector(2 downto 0);
+        i_a:            in std_logic_vector(31 downto 0);
+        io_d:           inout std_logic_vector(7 downto 0) := (others => 'Z');
+        i_ncbreq:       in std_logic;
+        o_ncback:       out std_logic := '1';
+        o_nci:          out std_logic := '1';
+        o_nberr:        out std_logic;
 
         -- DRAM Controller Signals
-        o_ma: out std_logic_vector(11 downto 0);
-        o_ncas: out std_logic_vector(3 downto 0);
-        o_nras: out std_logic_vector(7 downto 0);
-        o_nwe: out std_logic;
-        i_nrefresh: in std_logic;
-        o_npagehit: out std_logic;
+        o_ma:           out std_logic_vector(11 downto 0);
+        o_ncas:         out std_logic_vector(3 downto 0);
+        o_nras:         out std_logic_vector(7 downto 0);
+        o_nwe:          out std_logic;
+        i_nrefresh:     in std_logic;
+        o_npagehit:     out std_logic;
 
         -- ISA Bus Signals
-        i_nnows: in std_logic;
-        i_iochrdy_isa: in std_logic;
-        i_iochck: in std_logic;
-        o_ale: out std_logic;
-        o_sbhe: out std_logic;
-        o_nsmemr: out std_logic;
-        o_nsmemw: out std_logic;
-        o_nmemr: out std_logic;
-        o_nmemw: out std_logic;
-        o_nior: out std_logic;
-        o_niow: out std_logic;
-        o_nmemcs16: out std_logic;
-        o_niocs16_isa: out std_logic;
-        o_nbufen_isa: out std_logic;
-        o_bufdir_isa: out std_logic;
-
-        -- IDE Bus Signals
-        o_niocs16_ide: out std_logic;
-        i_iochrdy_ide: in std_logic;
-        o_ndior: out std_logic;
-        o_ndiow: out std_logic;
-        o_nbufen_ide: out std_logic;
-        o_bufdir_ide: out std_logic;
+        i_nnows:        in std_logic;
+        i_iochrdy:      in std_logic;
+        i_iochck:       in std_logic;
+        o_ale:          out std_logic;
+        o_sbhe:         out std_logic;
+        o_nsmemr:       out std_logic;
+        o_nsmemw:       out std_logic;
+        o_nmemr:        out std_logic;
+        o_nmemw:        out std_logic;
+        o_nior:         out std_logic;
+        o_niow:         out std_logic;
+        o_nmemcs16:     out std_logic;
+        o_niocs16:      out std_logic;
+        o_nbufen:       out std_logic;
+        o_bufdir:       out std_logic;
 
         -- Interrupt Controller Signals
-        o_nipl: out std_logic_vector(2 downto 0);
-        i_irq: in std_logic_vector(19 downto 0);
-        o_iack: out std_logic_vector(4 downto 0);
-        o_niacken: out std_logic;
-        o_nberr: out std_logic;
+        o_nipl:         out std_logic_vector(2 downto 0);
+        i_irq:          in std_logic_vector(19 downto 0);
 
         -- Processor Clock Configuration Signals
-        o_npclk8m: out std_logic;
-        o_pclksel: out std_logic_vector(2 downto 0);
+        o_npclk8m:      out std_logic;
+        o_pclksel:      out std_logic_vector(2 downto 0);
 
         -- Power Control Signals
-        i_npsw: in std_logic;
-        o_npwroff: out std_logic;
-
-        -- Misc Signals
-        o_nboot: out std_logic;
-        o_nrd: out std_logic;
-        o_nwr: out std_logic
+        i_npsw:         in std_logic;
+        o_npwroff:      out std_logic
     );
 end top;
 
 architecture behavioral of top is
-    signal i_rst: std_logic;
-    signal berr: std_logic;
+    signal rst: std_logic;
 
-    -- Chip select / function enable signals
-    signal en_ccr: std_logic;
-    signal en_dcr: std_logic;
-    signal en_fcr: std_logic;
-    signal en_pcr: std_logic;
-    signal en_abr: std_logic;
-    signal en_ider: std_logic;
-    signal en_isar: std_logic;
-    signal en_picr: std_logic;
+    -- Chip, entity, or register select signals
+    signal sel_coproc: std_logic;
+    signal sel_iack: std_logic;
+    signal sel_dram: std_logic;
+    signal sel_flash: std_logic;
+    signal sel_isa: std_logic;
+    signal sel_ireg: std_logic;
+    signal sel_mfp0: std_logic;
+    signal sel_mfp1: std_logic;
+    signal sel_dmac0: std_logic;
+    signal sel_dmac1: std_logic;
+    signal sel_ccr: std_logic;
+    signal sel_pcr: std_logic;
+    signal sel_isar: std_logic;
+    signal sel_fcr: std_logic;
+    signal sel_abr: std_logic;
+    signal sel_dcr: std_logic;
+    signal sel_tcr: std_logic;
+    signal sel_icr: std_logic;
 
-    signal en_ram: std_logic;
-    signal en_flash: std_logic;
-    signal en_isa: std_logic;
-
-    signal en_ide: std_logic_vector(1 downto 0);
-    signal en_i8042: std_logic;
-    signal en_fdc: std_logic;
-    signal en_rtc: std_logic;
-
-    signal en_mfp0: std_logic;
-    signal en_mfp1: std_logic;
-    signal en_duart: std_logic;
-    signal en_dmac0: std_logic;
-    signal en_dmac1: std_logic;
-
-    -- CPU interface signals for internal usage
+    -- Internal Bus Signals
     signal rd: std_logic := '0';
     signal wr: std_logic := '0';
-    signal size: std_logic_vector(1 downto 0) := (others => '0');
     signal ack8: std_logic := '0';
     signal ack16: std_logic := '0';
     signal ack32: std_logic := '0';
-    signal cben: std_logic := '1';
+    signal berr: std_logic;
+    signal di: std_logic_vector(7 downto 0) := (others => '0');
+    signal do: std_logic_vector(7 downto 0) := (others => '0');
     signal cbok: std_logic := '0';
     signal ci: std_logic := '0';
     signal burst: std_logic := '0';
-    signal fc: std_logic_vector(2 downto 0) := (others => '0');
-    signal a: std_logic_vector(31 downto 0) := (others => '0');
-    signal di: std_logic_vector(7 downto 0) := (others => '0');
-    signal do: std_logic_vector(7 downto 0) := (others => '0');
 
     -- DRAM interface signals
     signal ras: std_logic_vector(7 downto 0);
@@ -153,62 +124,34 @@ architecture behavioral of top is
     signal ior: std_logic;
     signal iow: std_logic;
     signal memcs16: std_logic;
-    signal iocs16_isa: std_logic;
-    signal bufen_isa: std_logic;
+    signal iocs16: std_logic;
+    signal bufen: std_logic;
 
     -- Interrupt controller signals
-    signal nmi: std_logic;
-
-    -- IDE bus interface signals
-    signal iocs16_ide: std_logic;
-    signal dior: std_logic;
-    signal diow: std_logic;
-    signal bufen_ide: std_logic;
+    signal irq_internal: std_logic_vector(3 downto 0);
+    signal ipl: std_logic_vector(2 downto 0);
 
     -- Power control signals
     signal psw: std_logic;
     signal pwroff: std_logic;
 
-    -- Misc signals
-    signal boot: std_logic;
-
     -- CCR register data
     signal ccr_data: std_logic_vector(7 downto 0);
+    signal cpu_enable_burst: boolean := false;
+    signal remap_flash: boolean := true;
 
-    -- Individual ack/do signals
-    signal ack8_boot_vector: std_logic;
-    signal ack8_isab: std_logic;
-    signal ack8_ideb: std_logic;
-    signal ack8_fmcb: std_logic;
-    signal ack8_mcb: std_logic;
-    signal ack8_pwb: std_logic;
-    signal ack8_ccr: std_logic;
-    signal ack16_isab: std_logic;
-    signal ack16_ideb: std_logic;
-    signal ack16_fmcb: std_logic;
-    signal do_boot_vector: std_logic_vector(7 downto 0);
-    signal do_isab: std_logic_vector(7 downto 0);
-    signal do_ideb: std_logic_vector(7 downto 0);
-    signal do_fmcb: std_logic_vector(7 downto 0);
-    signal do_mcb: std_logic_vector(7 downto 0);
-    signal do_ccr: std_logic_vector(7 downto 0);
-    signal do_pwb: std_logic_vector(7 downto 0);
+    type do_array_t is array(0 to 6) of std_logic_vector(7 downto 0);
+    signal do_array: do_array_t;
+    signal ack8_array: std_logic_vector(6 downto 0);
+    signal ack16_array: std_logic_vector(1 downto 0);
 begin
-    o_nen_rom <= not en_flash;
-    o_nen_i8042 <= not en_i8042;
-    o_nen_rtc <= not en_rtc;
-    o_nen_ide <= not en_ide;
-    o_nen_fdc <= not en_fdc;
-    o_nen_mfp0 <= not en_mfp0;
-    o_nen_mfp1 <= not en_mfp1;
-    o_nen_duart <= not en_duart;
-    o_nen_dmac0 <= not en_dmac0;
-    o_nen_dmac1 <= not en_dmac1;
-
-    i_rst <= not i_nrst;
-    o_nberr <= not berr;
-    o_nboot <= not boot;
-    o_nci <= not ci;
+    rst <= not i_nrst;
+    
+    o_nen_flash <= not sel_flash;
+    o_nen_mfp0 <= not sel_mfp0;
+    o_nen_mfp1 <= not sel_mfp1;
+    o_nen_dmac0 <= not sel_dmac0;
+    o_nen_dmac1 <= not sel_dmac1;
 
     o_nras <= not ras;
     o_ncas <= not cas;
@@ -224,223 +167,230 @@ begin
     o_nior <= not ior;
     o_niow <= not iow;
     o_nmemcs16 <= not memcs16;
-    o_niocs16_isa <= not iocs16_isa;
-    o_nbufen_isa <= not bufen_isa;
+    o_niocs16 <= not iocs16;
+    o_nbufen <= not bufen;
 
-    o_niocs16_ide <= not iocs16_ide;
-    o_ndior <= not dior;
-    o_ndiow <= not diow;
-    o_nbufen_ide <= not bufen_ide;
+    o_nipl(0) <= '0' when ipl(0) = '1' else 'Z';
+    o_nipl(1) <= '0' when ipl(1) = '1' else 'Z';
+    o_nipl(2) <= '0' when ipl(2) = '1' else 'Z';
 
     psw <= not i_npsw;
     o_npwroff <= not pwroff;
 
+    do <=
+        do_array(0) or do_array(1) or do_array(2) or do_array(3) or
+        do_array(4) or do_array(5) or do_array(6);
+    ack8 <= or ack8_array;
+    ack16 <= or ack16_array;
+
+    register_ccr: entity work.reg
+        generic map (
+            reset_value     => x"02"
+        )
+        port map (
+            i_clk       => i_clk,
+            i_rst       => rst,
+            i_select    => sel_ccr,
+
+            i_rd        => rd,
+            i_wr        => wr,
+            i_di        => di,
+            o_do        => do_array(0),
+            o_ack8      => ack8_array(0),
+
+            o_reg       => ccr_data
+        );
     o_npclk8m <= ccr_data(7);
     o_pclksel <= ccr_data(6 downto 4);
-    boot <= not ccr_data(1);
-    cben <= ccr_data(0);
+    remap_flash <= ccr_data(1) = '1';
+    cpu_enable_burst <= ccr_data(0) = '1';
 
-    ack8 <= ack8_boot_vector or ack8_isab or ack8_ideb or ack8_fmcb or ack8_mcb or ack8_ccr or ack8_pwb;
-    ack16 <= ack16_isab or ack16_ideb or ack16_fmcb;
-    do <= do_boot_vector or do_isab or do_ideb or do_fmcb or do_mcb or do_ccr or do_pwb;
-
-    rd <= not i_nas and i_r_nw;
-    wr <= not i_nas and not i_r_nw;
-
-    process(i_clk, i_nrst)
-    begin
-        if i_nrst = '0' then
-        elsif rising_edge(i_clk) then
-            if i_nas = '0' then
-                a <= i_a;
-                size <= i_size;
-                fc <= i_fc;
-            end if;
-
-            if i_nds = '0' then
-                if rd = '1' then  -- read
-                    io_d <= do;
-                elsif wr = '1' then  -- write
-                    di <= io_d;
-                end if;
-
-                burst <= cben and cbok and not i_ncbreq;
-            end if;
-
-            if ack8 = '1' then
-                o_ndsack <= DSACK_8;
-            elsif ack16 = '1' then
-                o_ndsack <= DSACK_16;
-            elsif ack32 = '1' then
-                o_nsterm <= '0';
-            else
-                o_ndsack <= DSACK_IDLE;
-                o_nsterm <= 'Z';
-            end if;
-
-            o_ncback <= not (cben and cbok and not i_ncbreq);
-        end if;
-    end process;
-
-    pwb: entity work.pwb
+    cpu_interface: entity work.cpu_interface
         port map (
-            i_clk    => i_clk,
-            i_rst    => i_rst,
-            i_en_pcr => en_pcr,
-            i_rd     => rd,
-            i_wr     => wr,
-            i_d      => di,
-            o_d      => do_pwb,
-            o_ack8   => ack8_pwb,
-            i_psw    => psw,
-            o_pwroff => pwroff,
-            o_nmi    => nmi
-        );
+            i_clk               => i_clk,
+            i_nrst              => i_nrst,
 
-    ccr: entity work.reg
-        port map (
-            i_clk  => i_clk,
-            i_rst  => i_rst,
-            i_en   => en_ccr,
-            i_rd   => rd,
-            i_wr   => wr,
-            o_ack8 => ack8_ccr,
-            i_d    => di,
-            o_d    => do_ccr,
-            o_reg  => ccr_data
-        );
+            i_nas               => i_nas,
+            i_nds               => i_nds,
+            i_r_nw              => i_r_nw,
+            o_ndsack            => o_ndsack,
+            o_nsterm            => o_nsterm,
+            o_nberr             => o_nberr,
+            i_fc                => i_fc,
+            i_a                 => i_a,
+            io_d                => io_d,
+            i_ncbreq            => i_ncbreq,
+            o_ncback            => o_ncback,
 
-    boot_vector: entity work.boot_vector
-        port map (
-            i_clk  => i_clk,
-            i_rst  => i_rst,
-            i_rd   => rd,
-            i_a    => a(2 downto 0),
-            o_d    => do_boot_vector,
-            o_ack8 => ack8_boot_vector,
-            i_boot => boot
+            o_rd                => rd,
+            o_wr                => wr,
+            i_ack8              => ack8,
+            i_ack16             => ack16,
+            i_ack32             => ack32,
+            i_berr              => berr,
+            o_di                => di,
+            i_do                => do,
+            i_cbok              => cbok,
+            i_ci                => ci,
+            o_burst             => burst,
+
+            i_cpu_enable_burst  => cpu_enable_burst
         );
 
     addr_decoder: entity work.addr_decoder
         port map (
-            i_fc       => fc,
-            i_a        => i_a,
-            i_as       => not i_nas,
-            i_boot     => boot,
-            o_cbok     => cbok,
-            o_ci       => ci,
-            o_en_ccr   => en_ccr,
-            o_en_dcr   => en_dcr,
-            o_en_fcr   => en_fcr,
-            o_en_pcr   => en_pcr,
-            o_en_abr   => en_abr,
-            o_en_ider  => en_ider,
-            o_en_isar  => en_isar,
-            o_en_picr  => en_picr,
-            o_en_ram   => en_ram,
-            o_en_flash => en_flash,
-            o_en_isa   => en_isa,
-            o_en_ide   => en_ide,
-            o_en_i8042 => en_i8042,
-            o_en_fdc   => en_fdc,
-            o_en_rtc   => en_rtc,
-            o_en_mfp0  => en_mfp0,
-            o_en_mfp1  => en_mfp1,
-            o_en_duart => en_duart,
-            o_en_dmac0 => en_dmac0,
-            o_en_dmac1 => en_dmac1
+            i_nas               => i_nas,
+            i_fc                => i_fc,
+            i_a                 => i_a,
+            o_sel_coproc        => sel_coproc,
+            o_sel_iack          => sel_iack,
+            o_sel_dram          => sel_dram,
+            o_sel_flash         => sel_flash,
+            o_sel_isa           => sel_isa,
+            o_sel_ireg          => sel_ireg,
+            o_sel_mfp0          => sel_mfp0,
+            o_sel_mfp1          => sel_mfp1,
+            o_sel_dmac0         => sel_dmac0,
+            o_sel_dmac1         => sel_dmac1,
+            o_sel_ccr           => sel_ccr,
+            o_sel_pcr           => sel_pcr,
+            o_sel_isar          => sel_isar,
+            o_sel_fcr           => sel_fcr,
+            o_sel_abr           => sel_abr,
+            o_sel_dcr           => sel_dcr,
+            o_sel_tcr           => sel_tcr,
+            o_sel_icr           => sel_icr,
+            i_remap_flash       => remap_flash
         );
 
-    isab: entity work.isab
+    power_controller: entity work.power_controller
         port map (
-            i_rst        => i_rst,
-            i_clk        => i_clk,
-            i_isaclk     => i_isaclk,
-            i_en_isa     => en_isa,
-            i_en_isar    => en_isar,
-            i_size       => size,
-            i_rd         => rd,
-            i_wr         => wr,
-            i_a          => a(23 downto 16),
-            i_d          => di,
-            o_d          => do_isab,
-            o_berr       => berr,
-            o_ack8       => ack8_isab,
-            o_ack16      => ack16_isab,
-            i_nows       => nows,
-            i_iochrdy    => i_iochrdy_isa,
-            i_iochck     => i_iochck,
-            o_ale        => o_ale,
-            o_sbhe       => o_sbhe,
-            o_smemr      => smemr,
-            o_smemw      => smemw,
-            o_memr       => memr,
-            o_memw       => memw,
-            o_ior        => ior,
-            o_iow        => iow,
-            o_memcs16    => memcs16,
-            o_iocs16     => iocs16_isa,
-            o_bufen      => bufen_isa,
-            o_bufdir     => o_bufdir_isa
+            i_rst               => rst,
+            i_clk               => i_clk,
+            i_sel_pcr           => sel_pcr,
+            
+            i_rd                => rd,
+            i_wr                => wr,
+            i_d                 => di,
+            o_d                 => do_array(1),
+            o_ack8              => ack8_array(1),
+
+            i_psw               => psw,
+            o_pwroff            => pwroff,
+            o_irq               => irq_internal(3)
         );
 
-    ideb: entity work.ideb
+    isa_controller: entity work.isa_controller
         port map (
-            i_rst     => i_rst,
-            i_clk     => i_clk,
-            i_en_ide  => en_ide,
-            i_en_ider => en_ider,
-            i_size    => size,
-            i_rd      => rd,
-            i_wr      => wr,
-            i_a0      => a(0),
-            i_d       => di,
-            o_d       => do_ideb,
-            o_ack8    => ack8_ideb,
-            o_ack16   => ack16_ideb,
-            o_iocs16  => iocs16_ide,
-            o_dior    => dior,
-            o_diow    => diow,
-            i_iochrdy => i_iochrdy_ide,
-            o_bufen   => bufen_ide,
-            o_bufdir  => o_bufdir_ide
+            i_rst               => rst,
+            i_clk               => i_clk,
+            i_isaclk            => i_isaclk,
+            i_select            => sel_isa,
+            i_sel_isar          => sel_isar,
+
+            i_size              => i_size,
+            i_rd                => rd,
+            i_wr                => wr,
+            i_a                 => i_a(23 downto 16),
+            i_d                 => di,
+            o_d                 => do_array(2),
+            o_berr              => berr,
+            o_ack8              => ack8_array(2),
+            o_ack16             => ack16_array(0),
+
+            i_nows              => nows,
+            i_iochrdy           => i_iochrdy,
+            i_iochck            => i_iochck,
+            o_ale               => o_ale,
+            o_sbhe              => o_sbhe,
+            o_smemr             => smemr,
+            o_smemw             => smemw,
+            o_memr              => memr,
+            o_memw              => memw,
+            o_ior               => ior,
+            o_iow               => iow,
+            o_memcs16           => memcs16,
+            o_iocs16            => iocs16,
+
+            o_bufen             => bufen,
+            o_bufdir            => o_bufdir
         );
 
-    fmcb: entity work.fmcb
+    flash_controller: entity work.flash_controller
         port map (
-            i_clk      => i_clk,
-            i_rst      => i_rst,
-            i_en_flash => en_flash,
-            i_en_fcr   => en_fcr,
-            i_rd       => rd,
-            i_wr       => wr,
-            i_d        => di,
-            o_d        => do_fmcb,
-            o_ack8     => ack8_fmcb,
-            o_ack16    => ack16_fmcb
+            i_rst               => rst,
+            i_clk               => i_clk,
+            i_select            => sel_flash,
+            i_sel_fcr           => sel_fcr,
+
+            i_rd                => rd,
+            i_wr                => wr,
+            i_d                 => di,
+            o_d                 => do_array(3),
+            o_ack8              => ack8_array(3),
+            o_ack16             => ack16_array(1)
         );
 
-    mcb: entity work.mcb
+    dram_controller: entity work.dram_controller
         port map (
-            i_rst     => i_rst,
-            i_clk     => i_clk,
-            i_en_ram  => en_ram,
-            i_en_abr  => en_abr,
-            i_en_dcr  => en_dcr,
-            i_size    => size,
-            i_rd      => rd,
-            i_wr      => wr,
-            i_a       => a(27 downto 0),
-            i_d       => di,
-            o_d       => do_mcb,
-            o_ack8    => ack8_mcb,
-            o_ack32   => ack32,
-            i_burst   => burst,
-            o_ma      => o_ma,
-            o_ras     => ras,
-            o_cas     => cas,
-            o_we      => we,
-            i_refresh => refresh,
-            o_pagehit => pagehit
+            i_rst               => rst,
+            i_clk               => i_clk,
+            i_select            => sel_dram,
+            i_sel_abr           => sel_abr,
+            i_sel_dcr           => sel_dcr,
+
+            i_size              => i_size,
+            i_rd                => rd,
+            i_wr                => wr,
+            i_a                 => i_a(27 downto 0),
+            i_d                 => di,
+            o_d                 => do_array(4),
+            o_ack8              => ack8_array(4),
+            o_ack32             => ack32,
+            o_cbok              => cbok,
+            i_burst             => burst,
+
+            i_refresh           => refresh,
+
+            o_ma                => o_ma,
+            o_ras               => ras,
+            o_cas               => cas,
+            o_we                => we,
+            o_pagehit           => pagehit
+        );
+
+    timer: entity work.timer
+        port map (
+            i_rst               => rst,
+            i_clk               => i_clk,
+            i_sel_tcr           => sel_tcr,
+            
+            i_rd                => rd,
+            i_wr                => wr,
+            i_a                 => i_a(3 downto 0),
+            i_d                 => di,
+            o_d                 => do_array(5),
+            o_ack8              => ack8_array(5),
+
+            o_irq               => irq_internal(2 downto 0)
+        );
+
+    irq_controller: entity work.irq_controller
+        port map (
+            i_clk               => i_clk,
+            i_rst               => rst,
+            i_sel_icr           => sel_icr,
+            i_sel_iack          => sel_iack,
+            
+            i_rd                => rd,
+            i_wr                => wr,
+            i_a                 => i_a(3 downto 0),
+            i_d                 => di,
+            o_d                 => do_array(6),
+            o_ack8              => ack8_array(6),
+
+            i_irq               => irq_internal & i_irq,
+
+            o_ipl               => ipl
         );
 end behavioral;

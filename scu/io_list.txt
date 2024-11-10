@@ -9,7 +9,7 @@ R 2 FD000004
 R 2 FD000006
 
 ; disable boot vector and set clock
-W 1 FF000000 83 ; Release 8MHz clock
+W 1 FF000000 81 ; Release 8MHz clock
                 ; Set CPU clock to 33.333MHz
                 ; Disable boot vector
                 ; Enable burst read operation
@@ -37,28 +37,66 @@ R 2 FD00002C
 R 2 FD00002E
 
 ; set other registers
-W 1 FF000001 09 ; Address mapping mode 0
-                ; RAS-to-CAS delay = 2 PCLK
-                ; RAS precharge time = 1 PCLK
-W 1 FF000002 02 ; Firmware flash latency = 2 PCLK
-W 1 FF000004 88 ; Enable IDE controller
-                ; Pre-command delay = 8 PCLK
-W 1 FF000005 F7 ; Default 8-bit transfer wait states = 15
-                ; Default 16-bit transfer wait states = 7
-W 1 FF000006 04 ; 16-bit I/O pre-command delay = 5 PCLK
-                ; 8-bit I/O pre-command delay = 5 PCLK
-                ; Enable ISA controller
-                ; Default 16-bit transfer wait states = 2
+W 1 FF000002 B0 ; Enable ISA controller
                 ; Default 8-bit transfer wait states = 5
-W 1 FF000008 02 ; Memory bank 0 address boundary = ~ 0x001FFFFF (2 MiB)
-W 1 FF000009 04 ; Memory bank 1 address boundary = ~ 0x003FFFFF (2 MiB)
-W 1 FF00000A 06 ; Memory bank 2 address boundary = ~ 0x005FFFFF (2 MiB)
-W 1 FF00000B 08 ; Memory bank 3 address boundary = ~ 0x007FFFFF (2 MiB)
-W 1 FF00000C 0A ; Memory bank 4 address boundary = ~ 0x009FFFFF (2 MiB)
-W 1 FF00000D 0C ; Memory bank 5 address boundary = ~ 0x00BFFFFF (2 MiB)
-W 1 FF00000E 0E ; Memory bank 6 address boundary = ~ 0x00DFFFFF (2 MiB)
-W 1 FF00000F 10 ; Memory bank 7 address boundary = ~ 0x00FFFFFF (2 MiB)
+                ; Default 16-bit transfer wait states = 2
+                ; 8-bit I/O pre-command delay = 5 PCLK
+                ; 16-bit I/O pre-command delay = 5 PCLK
+W 1 FF000003 83 ; Firmware flash latency = 2 PCLK
+W 1 FF000007 89 ; Enable DRAM Controller
+                ; Address mapping mode 0
+                ; Trcd = 2 PCLK
+                ; Tras = 1 PCLK
+                ; Twr = 2 PCLK
+W 1 FF000008 02 ; Memory bank 0 address boundary = 0x00000000-0x001FFFFF (2 MiB)
+W 1 FF000009 04 ; Memory bank 1 address boundary = 0x00200000-0x003FFFFF (2 MiB)
+W 1 FF00000A 06 ; Memory bank 2 address boundary = 0x00400000-0x005FFFFF (2 MiB)
+W 1 FF00000B 08 ; Memory bank 3 address boundary = 0x00600000-0x007FFFFF (2 MiB)
+W 1 FF00000C 0A ; Memory bank 4 address boundary = 0x00800000-0x009FFFFF (2 MiB)
+W 1 FF00000D 0C ; Memory bank 5 address boundary = 0x00A00000-0x00BFFFFF (2 MiB)
+W 1 FF00000E 0E ; Memory bank 6 address boundary = 0x00C00000-0x00DFFFFF (2 MiB)
+W 1 FF00000F 10 ; Memory bank 7 address boundary = 0x00E00000-0x00FFFFFF (2 MiB)
+W 1 FF00002A 23 ; IRQ 20 (Timer channel A) cpu irq level = 3
+                ; irq 21 (Timer channel B) cpu irq level = 2
+W 1 FF000011 00 ; Timer channel A counter value = 0x000010
+W 1 FF000012 00
+W 1 FF000013 10
+W 1 FF000010 C0 ; Enable timer channel A with irq
+                ; Periodic mode
 
+; test and disable timer channel A
+R 4 00000000 ; delay
+R 4 00000004
+R 4 00000FF8 ; irq will be fired at here
+R 1 FF000010
+R 4 00000000 ; delay
+R 4 00000004
+R 4 00000FF8 ; irq will be fired at here
+R 1 FF000010
+R 4 00000000 ; delay
+R 4 00000004
+R 4 00000FF8 ; irq will be fired at here
+R 1 FF000010
+R 4 00000000 ; delay
+R 4 00000004
+R 4 00000FF8 ; irq will be fired at here
+W 1 FF000010 40 ; disable timer channel A
+
+; test nested timer channel irq (using timer channel A and B)
+W 1 FF000015 00 ; Timer channel B counter valie = 0x000010
+W 1 FF000016 00
+W 1 FF000017 10
+W 1 FF000010 C1 ; Enable timer channel A with irq
+                ; One-shot mode
+W 1 FF000014 C1 ; Enable timer channel B with irq
+                ; One-shot mode
+R 4 00000000
+R 4 00000004
+R 4 00000008
+R 4 0000000C
+R 1 FF000010 ; acknowledge timer channel A irq
+             ;irq level of timer channel A is higher than that of channel B
+R 1 FF000014 ; acknowledge timer channel B irq
 
 ; r/w dram
 R 4 00000000

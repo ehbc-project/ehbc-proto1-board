@@ -5221,16 +5221,6 @@
 		)
 		(uuid "0799c409-7a06-47ca-b455-08a4dc352ae1")
 	)
-	(wire
-		(pts
-			(xy 121.92 180.34) (xy 116.84 180.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0861fa4c-7c1d-48e3-8116-4aa9876d3d29")
-	)
 	(bus
 		(pts
 			(xy 124.46 127) (xy 124.46 129.54)
@@ -6030,16 +6020,6 @@
 			(type default)
 		)
 		(uuid "301303ed-096e-41ae-88e6-21ed933041e6")
-	)
-	(bus
-		(pts
-			(xy 116.84 173.99) (xy 127 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "304fdd73-5191-49a3-b0ac-c2dedd4e029d")
 	)
 	(bus
 		(pts
@@ -9023,16 +9003,6 @@
 	)
 	(bus
 		(pts
-			(xy 116.84 170.18) (xy 127 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e24fd42e-20ac-435b-8469-1bd23fc7b64b")
-	)
-	(bus
-		(pts
 			(xy 267.97 129.54) (xy 267.97 132.08)
 		)
 		(stroke
@@ -9370,16 +9340,6 @@
 			(type default)
 		)
 		(uuid "f51c86b8-8515-4c9d-9df3-66748c31a9e4")
-	)
-	(wire
-		(pts
-			(xy 121.92 177.8) (xy 116.84 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5379fd6-948c-4b6a-a0cb-5822c3a6bd06")
 	)
 	(bus
 		(pts
@@ -11251,17 +11211,6 @@
 		)
 		(uuid "78feb5ee-be92-417b-992b-d4e3ec6003ad")
 	)
-	(label "~{IOCS16}"
-		(at 116.84 177.8 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7939359a-fee0-4a5e-bba0-674fe42b9f87")
-	)
 	(label "SBHE"
 		(at 41.91 134.62 180)
 		(fields_autoplaced yes)
@@ -12120,17 +12069,6 @@
 		)
 		(uuid "cce2d1d3-d49a-4d8d-ba8d-8c971f69c3d8")
 	)
-	(label "BD[0..15]"
-		(at 116.84 173.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ccf0f5b5-255e-4187-a414-b6b975955888")
-	)
 	(label "BD2"
 		(at 182.88 45.72 0)
 		(fields_autoplaced yes)
@@ -12560,17 +12498,6 @@
 		)
 		(uuid "ea8fcf1e-0ab9-4cfc-8f9f-aea97a324338")
 	)
-	(label "IOCHRDY"
-		(at 116.84 180.34 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ed3f1c75-799d-4125-9cb2-432c7e83d21d")
-	)
 	(label "BA21"
 		(at 182.88 119.38 0)
 		(fields_autoplaced yes)
@@ -12790,17 +12717,6 @@
 			(justify right bottom)
 		)
 		(uuid "ff03410a-4d7e-44a6-a0cc-88747bc12e1e")
-	)
-	(label "BA[0..23]"
-		(at 116.84 170.18 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ff5aec24-ac31-4ca4-a6b6-0fc13fd93f7c")
 	)
 	(global_label "IRQ12"
 		(shape output)
@@ -17412,84 +17328,6 @@
 				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/c4cd8f10-d1eb-4a99-9432-3d36759d5383"
 					(reference "#PWR038")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(sheet
-		(at 100.33 166.37)
-		(size 16.51 19.05)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "34296700-3b41-494d-a360-e50595b0cf25")
-		(property "Sheetname" "ide"
-			(at 100.33 165.6584 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "ide.kicad_sch"
-			(at 100.33 186.0046 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "BD[0..15]" bidirectional
-			(at 116.84 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "45fdec32-784e-4443-af22-e0be0b9adb6a")
-		)
-		(pin "BA[0..23]" input
-			(at 116.84 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "b789545a-4947-4a78-a2bf-941f62025dec")
-		)
-		(pin "~{IOCS16}" input
-			(at 116.84 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "3350b2e3-4f03-491e-bf29-650f8a2b9a87")
-		)
-		(pin "IOCHRDY" output
-			(at 116.84 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "9e9679e2-5bb5-45e6-8c6f-ed5102b87a45")
-		)
-		(instances
-			(project "proto1"
-				(path "/e910d5a4-fa64-450e-b748-cf3a61fb2249/c4cd8f10-d1eb-4a99-9432-3d36759d5383"
-					(page "30")
 				)
 			)
 		)

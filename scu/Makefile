@@ -4,17 +4,17 @@ VHDL_SOURCES= \
 	impl/common.vhd \
 	impl/reg.vhd \
 	impl/addr_decoder.vhd \
-	impl/boot_vector.vhd \
-	impl/isab/isa_addr_decoder.vhd \
-	impl/isab/isab.vhd \
-	impl/ideb/ideb.vhd \
-	impl/fmcb/fmcb.vhd \
-	impl/mcb/addr_mux.vhd \
-	impl/mcb/cas_generator.vhd \
-	impl/mcb/ras_generator.vhd \
-	impl/mcb/mcb.vhd \
-	impl/mcb/abr.vhd \
-	impl/pwb/pwb.vhd \
+	impl/cpu_interface.vhd \
+	impl/dram/addr_mux.vhd \
+	impl/dram/cas_generator.vhd \
+	impl/dram/ras_generator.vhd \
+	impl/dram_controller.vhd \
+	impl/flash_controller.vhd \
+	impl/irq_controller.vhd \
+	impl/isa_controller.vhd \
+	impl/power_controller.vhd \
+	impl/timer/timer_channel.vhd \
+	impl/timer.vhd \
 	impl/top.vhd \
 	sim/dram.vhd \
 	sim/dram_module.vhd \

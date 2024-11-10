@@ -636,28 +636,12 @@
       "flash"
     ],
     [
-      "c31fb516-9ad6-4f11-954c-fe79f07755e7",
-      "serial"
-    ],
-    [
-      "6a41e17c-36ae-4125-a7a2-d2c0c10da4d6",
-      "floppy"
-    ],
-    [
-      "792df1bb-e6c1-4138-ba8b-dae364f75afe",
-      "i8242"
-    ],
-    [
       "ca222314-2146-4a02-84e1-2494e581d5ec",
       "clock"
     ],
     [
       "5b20a555-1272-4400-b306-9ac30ef27e57",
       "power"
-    ],
-    [
-      "1e31ec6d-0f1f-4881-b8d4-c909198fd9d9",
-      "rtc"
     ],
     [
       "e1e0828e-59af-41a8-ba1a-7fad83581e05",
@@ -668,28 +652,8 @@
       "glue"
     ],
     [
-      "903f9606-a6b2-43d2-867a-0bdb5879f41d",
-      "audio"
-    ],
-    [
       "40562e04-f410-4acf-979e-5a3346ff1c02",
       "expansion"
-    ],
-    [
-      "aa433c97-b399-4cc8-ada6-d98e374afd84",
-      "mic_in"
-    ],
-    [
-      "d1f0adb9-c3db-447e-b8aa-2bbe703c9f3a",
-      "mono_out"
-    ],
-    [
-      "046917c3-78f6-4251-a4a8-d3e5008e91ce",
-      "line_in"
-    ],
-    [
-      "2b47fffb-c2d1-4257-ab6a-db69d7e4e1f5",
-      "line_out"
     ],
     [
       "f1fd40c7-2f6a-4a3d-a6ec-282a66809875",
@@ -704,20 +668,28 @@
       "buffer"
     ],
     [
+      "ecc804c2-a1b0-42aa-9ac9-c35f8c0ede92",
+      "Super IO"
+    ],
+    [
       "27af5ad9-2b85-4b38-a7d8-d2ae23d88c8c",
       "fpga"
+    ],
+    [
+      "eca63940-9829-463a-ae81-d68d1ff42dec",
+      "Parallel, Serial, Keyboard and Mouse"
     ],
     [
       "71e55d02-566d-4833-bd12-81a0b57e0881",
       "dmac"
     ],
     [
-      "99f2b94c-188a-49c3-ac77-d0966a46f6a1",
-      "demuxer"
+      "fbceda97-5434-4c05-8bcb-e2b9c9f6897e",
+      "IDE, Floppy, GPIO"
     ],
     [
-      "34296700-3b41-494d-a360-e50595b0cf25",
-      "ide"
+      "99f2b94c-188a-49c3-ac77-d0966a46f6a1",
+      "demuxer"
     ]
   ],
   "text_variables": {}

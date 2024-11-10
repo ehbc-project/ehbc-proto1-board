@@ -38,7 +38,7 @@ end testbench;
 architecture test of testbench is
     signal clk: std_logic := '0';
     signal isaclk: std_logic := '0';
-    signal nen_rom: std_logic;
+    signal nen_flash: std_logic;
     signal ma: std_logic_vector(11 downto 0) := (others => '0');
     signal ncas: std_logic_vector(3 downto 0) := (others => '1');
     signal nras: std_logic_vector(7 downto 0) := (others => '1');
@@ -70,16 +70,13 @@ begin
             i_clk         => clk,
             i_isaclk      => isaclk,
             i_nrst        => i_nrst,
-            o_nen_rom     => nen_rom,
---            o_nen_i8042   => o_nen_i8042,
---            o_nen_rtc     => o_nen_rtc,
---            o_nen_ide     => o_nen_ide,
---            o_nen_fdc     => o_nen_fdc,
---            o_nen_mfp0    => o_nen_mfp0,
---            o_nen_mfp1    => o_nen_mfp1,
---            o_nen_duart   => o_nen_duart,
---            o_nen_dmac0   => o_nen_dmac0,
---            o_nen_dmac1   => o_nen_dmac1,
+
+            o_nen_flash     => nen_flash,
+--          o_nen_mfp0    => o_nen_mfp0,
+--          o_nen_mfp1    => o_nen_mfp1,
+--          o_nen_dmac0   => o_nen_dmac0,
+--          o_nen_dmac1   => o_nen_dmac1,
+
             i_nas         => i_nas,
             i_nds         => i_nds,
             i_r_nw        => i_r_nw,
@@ -93,45 +90,40 @@ begin
             o_ncback      => o_ncback,
             o_nci         => o_nci,
             o_nberr       => o_nberr,
+
             o_ma          => ma,
             o_ncas        => ncas,
             o_nras        => nras,
             o_nwe         => nwe,
             i_nrefresh    => nrefresh,
---            o_npagehit    => o_npagehit,
+--          o_npagehit    => o_npagehit,
+
             i_nnows       => nnows,
-            i_iochrdy_isa => iochrdy_isa,
+            i_iochrdy     => iochrdy_isa,
             i_iochck      => iochck,
---            o_ale         => o_ale,
---            o_sbhe        => o_sbhe,
---            o_nsmemr      => o_nsmemr,
---            o_nsmemw      => o_nsmemw,
---            o_nmemr       => o_nmemr,
---            o_nmemw       => o_nmemw,
---            o_nior        => o_nior,
---            o_niow        => o_niow,
---            o_nmemcs16    => o_nmemcs16,
---            o_niocs16_isa => o_niocs16_isa,
---            o_nbufen_isa  => o_nbufen_isa,
---            o_bufdir_isa  => o_bufdir_isa,
---            o_niocs16_ide => o_niocs16_ide,
-            i_iochrdy_ide => iochrdy_ide,
---            o_ndior       => o_ndior,
---            o_ndiow       => o_ndiow,
---            o_nbufen_ide  => o_nbufen_ide,
---            o_bufdir_ide  => o_bufdir_ide,
+--          o_ale         => o_ale,
+--          o_sbhe        => o_sbhe,
+--          o_nsmemr      => o_nsmemr,
+--          o_nsmemw      => o_nsmemw,
+--          o_nmemr       => o_nmemr,
+--          o_nmemw       => o_nmemw,
+--          o_nior        => o_nior,
+--          o_niow        => o_niow,
+--          o_nmemcs16    => o_nmemcs16,
+--          o_niocs16     => o_niocs16,
+--          o_nbufen      => o_nbufen,
+--          o_bufdir      => o_bufdir,
             o_nipl        => o_nipl,
             i_irq         => irq,
---            o_iack        => o_iack,
---            o_niacken     => o_niacken,
---            o_nberr       => o_nberr,
+
             o_npclk8m     => npclk8m,
             o_pclksel     => pclksel,
             i_npsw        => npsw
---            o_npwroff     => o_npwroff,
---            o_nboot       => o_nboot,
---            o_nrd         => o_nrd,
---            o_nwr         => o_nwr
+--          o_npwroff     => o_npwroff,
+
+--          o_nboot       => o_nboot,
+--          o_nrd         => o_nrd,
+--          o_nwr         => o_nwr
         );
 
     simm0: entity work.dram_module
@@ -174,13 +166,13 @@ begin
         port map (
             A => i_a(19 downto 1),
             DQ => io_d(23 downto 16),
-            nCE => nen_rom
+            nCE => nen_flash
         );
 
     flash1: entity work.flash
         port map (
             A => i_a(19 downto 1),
             DQ => io_d(31 downto 24),
-            nCE => nen_rom
+            nCE => nen_flash
         );
 end test;

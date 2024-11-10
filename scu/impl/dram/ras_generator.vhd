@@ -9,21 +9,21 @@ use work.common.all;
 
 entity ras_generator is
     port (
-        i_rst: in std_logic;
+        i_rst:          in std_logic;
 
-        i_a: in std_logic_vector(27 downto 20);
+        i_a:            in std_logic_vector(27 downto 20);
         
-        i_abr0: in unsigned(7 downto 0);
-        i_abr1: in unsigned(7 downto 0);
-        i_abr2: in unsigned(7 downto 0);
-        i_abr3: in unsigned(7 downto 0);
-        i_abr4: in unsigned(7 downto 0);
-        i_abr5: in unsigned(7 downto 0);
-        i_abr6: in unsigned(7 downto 0);
-        i_abr7: in unsigned(7 downto 0);
+        i_abr0:         in std_logic_vector(7 downto 0);
+        i_abr1:         in std_logic_vector(7 downto 0);
+        i_abr2:         in std_logic_vector(7 downto 0);
+        i_abr3:         in std_logic_vector(7 downto 0);
+        i_abr4:         in std_logic_vector(7 downto 0);
+        i_abr5:         in std_logic_vector(7 downto 0);
+        i_abr6:         in std_logic_vector(7 downto 0);
+        i_abr7:         in std_logic_vector(7 downto 0);
 
-        i_ras_latch: in std_logic;
-        i_strobe_mode: in strobe_mode_t;
+        i_ras_latch:    in std_logic;
+        i_strobe_mode:  in strobe_mode_t;
 
         o_ras: out std_logic_vector(7 downto 0) := (others => '0');
         o_bank: out std_logic_vector(2 downto 0) := (others => '0')
@@ -55,21 +55,21 @@ begin
         end if;
     end process;
 
-    temp7 <= unsigned(i_a) < i_abr7;
+    temp7 <= unsigned(i_a) < unsigned(i_abr7);
     ras(7) <= '1' when temp7 and not temp6 else '0';
-    temp6 <= unsigned(i_a) < i_abr6;
+    temp6 <= unsigned(i_a) < unsigned(i_abr6);
     ras(6) <= '1' when temp6 and not temp5 else '0';
-    temp5 <= unsigned(i_a) < i_abr5;
+    temp5 <= unsigned(i_a) < unsigned(i_abr5);
     ras(5) <= '1' when temp5 and not temp4 else '0';
-    temp4 <= unsigned(i_a) < i_abr4;
+    temp4 <= unsigned(i_a) < unsigned(i_abr4);
     ras(4) <= '1' when temp4 and not temp3 else '0';
-    temp3 <= unsigned(i_a) < i_abr3;
+    temp3 <= unsigned(i_a) < unsigned(i_abr3);
     ras(3) <= '1' when temp3 and not temp2 else '0';
-    temp2 <= unsigned(i_a) < i_abr2;
+    temp2 <= unsigned(i_a) < unsigned(i_abr2);
     ras(2) <= '1' when temp2 and not temp1 else '0';
-    temp1 <= unsigned(i_a) < i_abr1;
+    temp1 <= unsigned(i_a) < unsigned(i_abr1);
     ras(1) <= '1' when temp1 and not temp0 else '0';
-    temp0 <= unsigned(i_a) < i_abr0;
+    temp0 <= unsigned(i_a) < unsigned(i_abr0);
     ras(0) <= '1' when temp0 else '0';
 
     o_bank <=
